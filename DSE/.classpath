@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="/home/prashant/lucene-3.0.2/lucene-core-3.0.2.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/prashant/lucene-3.0.2/apache-tika-0.8-src/tika-app/target/tika-app-0.8.jar"/>
+	<classpathentry kind="lib" path="/home/prashant/lucene-3.0.2/apache-log4j-1.2.16/log4j-1.2.16.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
