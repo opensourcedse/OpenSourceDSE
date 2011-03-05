@@ -14,28 +14,43 @@ import org.w3c.dom.*;
 public class CustomizationUI extends javax.swing.JFrame {
     
 	
-	private static String getTagValue(String sTag, Element eElement){
-	    NodeList nlList= eElement.getElementsByTagName(sTag).item(0).getChildNodes();
-	    Node nValue = (Node) nlList.item(0); 
-	 
-	    return nValue.getNodeValue();    
-	 }
-    public CustomizationUI() {
+	public CustomizationUI() {
         initComponents();
         try {
         	File fXmlFile = new File("optionFile.xml");
-        	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-        	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-        	Document doc = dBuilder.parse(fXmlFile);
-        	doc.getDocumentElement().normalize();
-        	NodeList nList = doc.getElementsByTagName("*");
-        	Node nNode = (Node) nList.item(0);
-        	System.out.println(nNode.getNodeValue());
-        	
-        	/*if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                Element eElement = (Element) nNode;
-                System.out.println(getTagValue("criticalDirectory",eElement));
-        	}*/
+        	if(fXmlFile.exists()){
+        		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            	Document doc = dBuilder.parse(fXmlFile);
+            	doc.getDocumentElement().normalize();
+            	NodeList nList=doc.getElementsByTagName("reIndexInterval");
+            	Node nNode = (Node) nList.item(0);
+            	jComboBoxInterval.setSelectedItem(nNode.getTextContent());
+            	nList = doc.getElementsByTagName("hotKey");
+            	nNode = (Node) nList.item(0);
+            	if(nNode.getTextContent().equalsIgnoreCase("true")){
+            		jCheckBoxHotKey.setSelected(true);
+            	}
+            	else{
+            		jCheckBoxHotKey.setSelected(false);
+            	}
+            	nList = doc.getElementsByTagName("criticalDirectory");
+            	nNode = (Node) nList.item(0);
+            	Element eElement = (Element) nNode;
+            	nList= eElement.getElementsByTagName("directory");
+        	    for(int i=0;i<nList.getLength();i++){
+        	    	Node nValue = (Node) nList.item(i);
+        	    	modelCritical.addElement(nValue.getTextContent());
+        	    } 
+                nList = doc.getElementsByTagName("notIndexedDirectory");
+            	nNode = (Node) nList.item(0);
+            	eElement = (Element) nNode;
+            	nList= eElement.getElementsByTagName("directory");
+        	    for(int i=0;i<nList.getLength();i++){
+        	    	Node nValue = (Node) nList.item(i);
+        	    	modelNotIndex.addElement(nValue.getTextContent());
+        	    } 
+        	}
         }catch(Exception e){System.out.println(e.getMessage());}
 
     }
@@ -59,6 +74,7 @@ public class CustomizationUI extends javax.swing.JFrame {
         jCheckBoxHotKey = new JCheckBox();
         jButtonSave = new JButton();
         jButtonCancel = new JButton();
+        jLabelInfo = new JLabel("Double Click on Directory name to Delete from the List");
         
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Customization Window");
@@ -107,7 +123,16 @@ public class CustomizationUI extends javax.swing.JFrame {
                 jButtonCancelMouseClicked(evt);
             }
         });
-        
+        jListCritical.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+            	jListCriticalMouseClicked(evt);
+            }
+        });
+        jListNotIndex.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+            	jListNotIndexMouseClicked(evt);
+            }
+        });
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -140,8 +165,10 @@ public class CustomizationUI extends javax.swing.JFrame {
                         .add(18, 18, 18)
                         .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 360, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(640, Short.MAX_VALUE)
+            .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
+            	.addContainerGap()
+            	.add(jLabelInfo)
+                .addContainerGap(100, Short.MAX_VALUE)
                 .add(jButtonSave)
                 .add(18, 18, 18)
                 .add(jButtonCancel)
@@ -169,7 +196,8 @@ public class CustomizationUI extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonCancel)
-                    .add(jButtonSave))
+                    .add(jButtonSave)
+                    .add(jLabelInfo))                    
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -213,6 +241,18 @@ public class CustomizationUI extends javax.swing.JFrame {
 		}
     }
     
+    private void jListCriticalMouseClicked(java.awt.event.MouseEvent evt) {
+    	if (evt.getClickCount() == 2) {
+    		modelCritical.removeElementAt(jListCritical.getSelectedIndex());
+    	}
+        
+    }
+    private void jListNotIndexMouseClicked(java.awt.event.MouseEvent evt) {
+    	if (evt.getClickCount() == 2) {
+    		modelNotIndex.removeElementAt(jListNotIndex.getSelectedIndex());
+    	}
+        
+    }
     private void jButtonSaveMouseClicked(java.awt.event.MouseEvent evt) {
     	try {
          createXML();
@@ -284,4 +324,5 @@ public class CustomizationUI extends javax.swing.JFrame {
     private JScrollPane jScrollPane2;
     private JButton jButtonCancel;
     private JButton jButtonSave;
+    private JLabel jLabelInfo;
 }

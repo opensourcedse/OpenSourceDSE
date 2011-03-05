@@ -67,7 +67,6 @@ public class IndexFiles extends SearchGui {
         writer.close();
         Date end = new Date();
         System.out.println(end.getTime() - start.getTime() + " total milliseconds");
-        resultArea.append("\n" +(end.getTime() - start.getTime()) + " total milliseconds");
     } catch (IOException e) {
         System.out.println(" caught a " + e.getClass() +
         "\n with message: " + e.getMessage());
@@ -155,6 +154,9 @@ public class IndexFiles extends SearchGui {
         		  if(lastModifiedOld.compareTo(lastModifiedNew)!=0) {
         			  writer.updateDocument(new Term("path",file.getCanonicalPath()), getDocument(file));
         		  }
+        	  }
+        	  if(false) {
+        		  writer.deleteDocuments(new Term("path",file.getCanonicalPath()));
         	  }
         	  percentageIndex += file.getTotalSpace();
         	  if(percentageIndex/totalIndex >= 0.5) {

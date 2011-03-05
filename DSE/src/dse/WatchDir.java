@@ -116,8 +116,6 @@ public class WatchDir {
     	else if(check == 2) {
     		try {
         		System.out.println(child);
-        		//BooleanQuery query = new BooleanQuery();
-        		//query.add(new TermQuery(new Term("path",child.toString())),BooleanClause.Occur.MUST);
         		writer.deleteDocuments(new Term("path",child.toString()));
         		writer.commit();
         	}catch(Exception e){System.out.println(e.getMessage());}
@@ -191,18 +189,30 @@ public class WatchDir {
                             registerAll(child);
                         }
                         else{
-                        	if(!child.toString().endsWith("#"))
+                        	if(!child.toString().endsWith("#")){
+                        		updateIndex(child,1);
                         		register(child);
+                        	}
                         }
                     } catch (IOException x){System.out.println(x.getMessage());} {
                         // ignore to keep sample readbale
                     }
                 }
-                else if(recursive && (kind==ENTRY_MODIFY)){                	
-                		updateIndex(child,1);
+                else if(recursive && (kind==ENTRY_MODIFY)){
+                	try {
+                		if (Files.readAttributes(child, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory()) {
+                			if(!child.toString().endsWith("#"))
+                				updateIndex(child,1);
+                		}
+                	}catch(Exception e){}
                 }
                 else if(recursive && (kind==ENTRY_DELETE)) {
-                	    updateIndex(child,2);
+                	try {
+                		if (Files.readAttributes(child, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory()) {
+                			if(!child.toString().endsWith("#"))
+                				updateIndex(child,2);
+                		}
+                	}catch(Exception e){}
                 }
             }
 

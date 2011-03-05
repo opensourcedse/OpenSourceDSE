@@ -209,12 +209,16 @@ public class SearchFiles {
 	        }
 	        if (numTotalHits >= end) {
 		          if (start - hitsPerPage >= 0) {
-		              dse.SearchGui.previous.setEnabled(true);
+		              dse.SearchGui.previousButton.setEnabled(true);
 		          }
 		          if (start + hitsPerPage < numTotalHits) {
-		        	  dse.SearchGui.previous.setEnabled(true);
+		        	  dse.SearchGui.previousButton.setEnabled(true);
 		          }
 		      } 
+	        if(numTotalHits > 10) 
+	        	SearchGui.nextButton.setEnabled(true);
+	        if(numTotalHits > 20)
+	        	SearchGui.jumpButton.setEnabled(true);
 	      }
 	  dse.SearchGui.resultArea.append("\n\nEnter the page number and Press next to jump");
   }

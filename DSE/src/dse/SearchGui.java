@@ -7,96 +7,167 @@ import java.awt.event.*;
 import java.io.File;
 
 
+public class SearchGui extends JFrame {
+    
+    public SearchGui() {
+        initComponents();
+    }
+    
+    private void initComponents() {
+    	model = new DefaultListModel();
+        jLabel1 = new JLabel();
+        queryText = new JTextField();
+        searchButton = new JButton();
+        nextButton = new JButton();
+        previousButton = new JButton();
+        jumpButton = new JButton();
+        jScrollPane1 = new JScrollPane();
+        resultList = new JList(model);
+        jScrollPane2 = new JScrollPane();
+        resultArea = new JTextArea();
+        
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Search GUI");
+        resultList.setCellRenderer(new MyListRenderer());
+        jLabel1.setText("Enter Text:");
+        nextButton.setEnabled(false);
+        previousButton.setEnabled(false);
+        jumpButton.setEnabled(false);
+        searchButton.setText("Find");
+        searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchButtonMouseClicked(evt);
+            }
+        });
 
-public class SearchGui implements ActionListener {
-	 
-	public final static DefaultListModel model = new DefaultListModel();
-	public JButton searchButton = new JButton("Search");
-	public JButton searchWRButton = new JButton("Search Within Results");
-	public JButton next = new JButton("Next");
-	public static JButton previous = new JButton("Previous");
-	public JButton jump = new JButton("Jump");
-	JFrame frame = new JFrame("Desktop Search Engine");
-	public static JTextField queryText = new JTextField(15);
-	public static JTextArea resultArea = new JTextArea(8,50);
-	public static JList resultList = new JList(model);
-	public static JScrollPane scrollerList = new JScrollPane(resultList);
-	public static JScrollPane scrollerText = new JScrollPane(resultArea);
-	private JPanel panel1 = new JPanel();
-	private JPanel panel2 = new JPanel();
-	public String folder;
-	
-	
-/*	ListSelectionListener listner = new ListSelectionListener() {
-		public void valueChanged(ListSelectionEvent listSelectionEvent) {
-			final File file = new File(resultList.getSelectedValue().toString());
+        nextButton.setText("Next");
+        nextButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextButtonMouseClicked(evt);
+            }
+        });
+
+        previousButton.setText("Previous");
+        previousButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                previousButtonMouseClicked(evt);
+            }
+        });
+
+        jumpButton.setText("Jump");
+        jScrollPane1.setViewportView(resultList);
+
+        resultArea.setColumns(20);
+        resultArea.setRows(5);
+        jScrollPane2.setViewportView(resultArea);
+        
+        resultList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                resultListMouseClicked(evt);
+            }
+        });
+
+        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(layout.createSequentialGroup()
+                .addContainerGap()
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(jLabel1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(layout.createSequentialGroup()
+                                .add(searchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(18, 18, 18)
+                                .add(nextButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 87, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(26, 26, 26)
+                                .add(previousButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                                .add(26, 26, 26)
+                                .add(jumpButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 87, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(queryText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)))
+                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane2)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(layout.createSequentialGroup()
+                .addContainerGap()
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel1)
+                    .add(queryText, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(searchButton)
+                    .add(jumpButton)
+                    .add(nextButton)
+                    .add(previousButton))
+                .add(18, 18, 18)
+                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        pack();
+    }
+
+    private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {
+    	resultArea.setText("");
+		resultArea.setCaretPosition(0);
+		String folder= queryText.getText();
+		try {
+			model.removeAllElements();
+			SearchFiles.searchQuery(folder);
+		}catch(Exception e){};
+    }
+
+    private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {
+    	try {
+			resultArea.setText("");
+			resultArea.setCaretPosition(0);
+			SearchFiles.nextPage(2);
+	     }catch(Exception e){};
+    }
+
+    private void previousButtonMouseClicked(java.awt.event.MouseEvent evt) {
+    	try {
+			resultArea.setText("");
+			resultArea.setCaretPosition(0);
+			SearchFiles.nextPage(1);
+		}catch(Exception e){}
+    }
+    
+    private void resultListMouseClicked(java.awt.event.MouseEvent evt) {
+    	if (evt.getClickCount() == 2) {
+        	JPanel panel = (JPanel) resultList.getSelectedValue();
+        	JLabel label = (JLabel) panel.getComponent(0);
+            final File file = new File(label.getText());
+            
 			try {
 			Desktop desktop = null;
-			Desktop.Action action;
+			//Desktop.Action action;
 			desktop = Desktop.getDesktop();
-			action = Desktop.Action.OPEN;
+			//action = Desktop.Action.OPEN;
 			desktop.open(file);
-			}catch(Exception e){System.out.println(e.getMessage());}
+			}catch(Exception et){System.out.println(et.getMessage());}
 		}
-	};*/
-	
-	MouseListener mouseListener = new MouseAdapter() {
-	    public void mouseClicked(MouseEvent e) {
-	        if (e.getClickCount() == 2) {
-	        	JPanel panel = (JPanel) resultList.getSelectedValue();
-	        	JLabel label = (JLabel) panel.getComponent(0);
-	            final File file = new File(label.getText());
-				try {
-				Desktop desktop = null;
-				//Desktop.Action action;
-				desktop = Desktop.getDesktop();
-				//action = Desktop.Action.OPEN;
-				desktop.open(file);
-				}catch(Exception et){System.out.println(et.getMessage());}
-			}
-	    }
-	};
-	public void go() {
-		searchButton.addActionListener(this);
-		searchWRButton.addActionListener(this);
-		next.addActionListener(this);
-		previous.addActionListener(this);
-		jump.addActionListener(this);
-		//resultList.addListSelectionListener(listner);
-		resultList.setCellRenderer(new DefaultListCellRenderer());
-		resultList.addMouseListener(mouseListener);
-		resultList.setVisibleRowCount(15);
-		resultList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		resultList.setCellRenderer(new MyListRenderer());
-		//resultList.setFixedCellWidth(500);
-		frame.getContentPane().add(BorderLayout.NORTH,queryText);
-		frame.getContentPane().add(BorderLayout.CENTER,panel1);
-		frame.getContentPane().add(BorderLayout.SOUTH,panel2);
-		//frame.getContentPane().add(BorderLayout.NORTH,searchButton);
-		//frame.getContentPane().add(BorderLayout.SOUTH,searchWRButton);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		resultArea.setLineWrap(true);
-		scrollerList.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		scrollerList.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-		scrollerText.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		scrollerText.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-		panel1.add(scrollerList);
-		panel1.add(scrollerText);
-		panel2.add(searchButton);
-		panel2.add(searchWRButton);
-		panel2.add(next);
-		panel2.add(previous);
-		panel2.add(jump);
-		frame.setSize(600,500);
-		frame.setVisible(true);
-		queryText.requestFocus();
-		next.setEnabled(true);
-		jump.setEnabled(true);
-		previous.setEnabled(false);
-		
-	}
-			
-	public void actionPerformed(ActionEvent event) {}
+    }
+    private JLabel jLabel1;
+    private JScrollPane jScrollPane1;
+    private JScrollPane jScrollPane2;
+    public static JButton jumpButton;
+    public static JButton nextButton;
+    public static JButton previousButton;
+    public static JTextField queryText;
+    public static JTextArea resultArea;
+    private JList resultList;
+    private JButton searchButton;
+    static DefaultListModel model;
+    
 	 class MyListRenderer implements ListCellRenderer {
 		   public Component getListCellRendererComponent(JList jlist,
 		                                                 Object value,
