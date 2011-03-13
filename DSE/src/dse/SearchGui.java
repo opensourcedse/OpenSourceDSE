@@ -5,12 +5,15 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
+import java.awt.TrayIcon;
+import java.awt.SystemTray;
 
 
 public class SearchGui extends JFrame {
     
     public SearchGui() {
         initComponents();
+       
     }
     
     private void initComponents() {
@@ -20,25 +23,28 @@ public class SearchGui extends JFrame {
         searchButton = new JButton();
         nextButton = new JButton();
         previousButton = new JButton();
-        jumpButton = new JButton();
+        cancelButton = new JButton();
         jScrollPane1 = new JScrollPane();
         resultList = new JList(model);
         jScrollPane2 = new JScrollPane();
         resultArea = new JTextArea();
         
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+       
         setTitle("Search GUI");
         resultList.setCellRenderer(new MyListRenderer());
         jLabel1.setText("Enter Text:");
         nextButton.setEnabled(false);
         previousButton.setEnabled(false);
-        jumpButton.setEnabled(false);
+
         searchButton.setText("Find");
         searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 searchButtonMouseClicked(evt);
             }
         });
+        
+        queryText.addKeyListener(new MyKeyListener());
 
         nextButton.setText("Next");
         nextButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -54,7 +60,12 @@ public class SearchGui extends JFrame {
             }
         });
 
-        jumpButton.setText("Jump");
+        cancelButton.setText("Cancel");
+        cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cancelButtonMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(resultList);
 
         resultArea.setColumns(20);
@@ -85,7 +96,7 @@ public class SearchGui extends JFrame {
                                 .add(26, 26, 26)
                                 .add(previousButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
                                 .add(26, 26, 26)
-                                .add(jumpButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 87, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(cancelButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 87, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(queryText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)))
                     .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                         .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane2)
@@ -102,7 +113,7 @@ public class SearchGui extends JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(searchButton)
-                    .add(jumpButton)
+                    .add(cancelButton)
                     .add(nextButton)
                     .add(previousButton))
                 .add(18, 18, 18)
@@ -114,7 +125,7 @@ public class SearchGui extends JFrame {
 
         pack();
     }
-
+ 
     private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {
     	resultArea.setText("");
 		resultArea.setCaretPosition(0);
@@ -124,7 +135,17 @@ public class SearchGui extends JFrame {
 			SearchFiles.searchQuery(folder);
 		}catch(Exception e){};
     }
+    
+   
+    private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {
+    		this.setVisible(false);
+    	
+    }
 
+    private void viewFrame()  {
+    	this.setVisible(true);
+    }
+    
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {
     	try {
 			resultArea.setText("");
@@ -159,7 +180,7 @@ public class SearchGui extends JFrame {
     private JLabel jLabel1;
     private JScrollPane jScrollPane1;
     private JScrollPane jScrollPane2;
-    public static JButton jumpButton;
+    public static JButton cancelButton;
     public static JButton nextButton;
     public static JButton previousButton;
     public static JTextField queryText;
@@ -167,6 +188,23 @@ public class SearchGui extends JFrame {
     private JList resultList;
     private JButton searchButton;
     static DefaultListModel model;
+    TrayIcon trayIcon;
+    SystemTray tray; 
+  
+    public class MyKeyListener extends KeyAdapter{
+        public void keyPressed(KeyEvent ke){
+        	if(ke.getKeyCode() == 10) {
+        		resultArea.setText("");
+        		resultArea.setCaretPosition(0);
+        		String folder= queryText.getText();
+        		try {
+        			model.removeAllElements();
+        			SearchFiles.searchQuery(folder);
+        		}catch(Exception e){};        			
+        	}
+        }
+      }  
+    
     
 	 class MyListRenderer implements ListCellRenderer {
 		   public Component getListCellRendererComponent(JList jlist,

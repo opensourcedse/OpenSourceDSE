@@ -1,8 +1,6 @@
 
 import dse.*;
-import java.awt.event.ActionEvent;
-import javax.swing.*;
-import java.awt.*;
+
 
 public class IndexMain extends IndexGui {
 	

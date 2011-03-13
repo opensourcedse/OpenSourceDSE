@@ -1,64 +1,47 @@
 package dse;
 
+import static java.nio.file.LinkOption.NOFOLLOW_LINKS;
+
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.*;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
+
 import javax.xml.parsers.*;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.*;
 import javax.xml.transform.stream.*;
 import org.w3c.dom.*;
-
-
-
+import java.util.*;
+import org.apache.lucene.index.Term;
+import java.nio.file.WatchKey;
 
 public class CustomizationUI extends javax.swing.JFrame {
     
 	
 	public CustomizationUI() {
         initComponents();
-        try {
-        	File fXmlFile = new File("optionFile.xml");
-        	if(fXmlFile.exists()){
-        		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            	Document doc = dBuilder.parse(fXmlFile);
-            	doc.getDocumentElement().normalize();
-            	NodeList nList=doc.getElementsByTagName("reIndexInterval");
-            	Node nNode = (Node) nList.item(0);
-            	jComboBoxInterval.setSelectedItem(nNode.getTextContent());
-            	nList = doc.getElementsByTagName("hotKey");
-            	nNode = (Node) nList.item(0);
-            	if(nNode.getTextContent().equalsIgnoreCase("true")){
-            		jCheckBoxHotKey.setSelected(true);
-            	}
-            	else{
-            		jCheckBoxHotKey.setSelected(false);
-            	}
-            	nList = doc.getElementsByTagName("criticalDirectory");
-            	nNode = (Node) nList.item(0);
-            	Element eElement = (Element) nNode;
-            	nList= eElement.getElementsByTagName("directory");
-        	    for(int i=0;i<nList.getLength();i++){
-        	    	Node nValue = (Node) nList.item(i);
-        	    	modelCritical.addElement(nValue.getTextContent());
-        	    } 
-                nList = doc.getElementsByTagName("notIndexedDirectory");
-            	nNode = (Node) nList.item(0);
-            	eElement = (Element) nNode;
-            	nList= eElement.getElementsByTagName("directory");
-        	    for(int i=0;i<nList.getLength();i++){
-        	    	Node nValue = (Node) nList.item(i);
-        	    	modelNotIndex.addElement(nValue.getTextContent());
-        	    } 
-        	}
-        }catch(Exception e){System.out.println(e.getMessage());}
-
+        jCheckBoxHotKey.setSelected(ReadCustomizationFile.hotKey);
+        jComboBoxInterval.setSelectedItem(ReadCustomizationFile.indexInterval);
+        Iterator<String> it = ReadCustomizationFile.criticalDirectory.iterator();
+        while (it.hasNext()) 
+            modelCritical.addElement(it.next());
+        it = ReadCustomizationFile.notIndexDirectory.iterator();
+        while (it.hasNext()) 
+            modelNotIndex.addElement(it.next());
+        jButtonSave.setEnabled(false);
     }
     
     private void initComponents() {
 
-    	modelCritical = new DefaultListModel();
-        modelNotIndex = new DefaultListModel();
+    	modelCritical = new DefaultListModel<String>();
+        modelNotIndex = new DefaultListModel<String>();
         jFileChooser  = new JFileChooser();
         jLabelCritical = new JLabel();
         jScrollPane1 = new JScrollPane();
@@ -76,7 +59,7 @@ public class CustomizationUI extends javax.swing.JFrame {
         jButtonCancel = new JButton();
         jLabelInfo = new JLabel("Double Click on Directory name to Delete from the List");
         
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
         setTitle("Customization Window");
         
         jButtonCritical.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -133,6 +116,8 @@ public class CustomizationUI extends javax.swing.JFrame {
             	jListNotIndexMouseClicked(evt);
             }
         });
+        jComboBoxInterval.addActionListener(jComboBoxListener);
+           
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -203,7 +188,6 @@ public class CustomizationUI extends javax.swing.JFrame {
 
         pack();
     }
-    
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -211,6 +195,12 @@ public class CustomizationUI extends javax.swing.JFrame {
             }
         });
     }
+   
+    ActionListener jComboBoxListener = new ActionListener() {  
+	    public void actionPerformed(ActionEvent e) {
+	    	jButtonSave.setEnabled(true);
+	    }  	   
+	};
     private void jButtonCriticalMouseClicked(java.awt.event.MouseEvent evt) {
         int check = jFileChooser.showOpenDialog(this);
 		if(check == jFileChooser.APPROVE_OPTION) {
@@ -225,6 +215,7 @@ public class CustomizationUI extends javax.swing.JFrame {
 				JOptionPane.showMessageDialog(this, "The Directory already exists in the other list");
 			
 		}
+		jButtonSave.setEnabled(true);
     }
     private void jButtonNotIndexMouseClicked(java.awt.event.MouseEvent evt) {
         int check = jFileChooser.showOpenDialog(this);
@@ -239,28 +230,137 @@ public class CustomizationUI extends javax.swing.JFrame {
 			else 
 				JOptionPane.showMessageDialog(this, "The Directory already exists in the other list");	
 		}
+		jButtonSave.setEnabled(true);
     }
     
     private void jListCriticalMouseClicked(java.awt.event.MouseEvent evt) {
     	if (evt.getClickCount() == 2) {
     		modelCritical.removeElementAt(jListCritical.getSelectedIndex());
     	}
+    	jButtonSave.setEnabled(true);
         
     }
     private void jListNotIndexMouseClicked(java.awt.event.MouseEvent evt) {
     	if (evt.getClickCount() == 2) {
     		modelNotIndex.removeElementAt(jListNotIndex.getSelectedIndex());
     	}
-        
+    	jButtonSave.setEnabled(true);        
     }
     private void jButtonSaveMouseClicked(java.awt.event.MouseEvent evt) {
     	try {
          createXML();
-    	}catch(Exception e){}
+         updateDirectoryList();
+    	}catch(Exception e){System.out.println(e.getMessage());}
+    	jButtonSave.setEnabled(false);
+    	
     }
-
+    private void updateDirectoryList() throws Exception{
+    	Set<String> oldCriticalDirectory = new HashSet<String>();
+    	Set<String> oldNotIndexDirectory = new HashSet<String>();
+    	oldCriticalDirectory = ReadCustomizationFile.criticalDirectory;
+    	oldNotIndexDirectory = ReadCustomizationFile.notIndexDirectory;
+    	ReadCustomizationFile.main(null);
+    	synchronized(InitializeWriter.writer) {
+    		Iterator it = ReadCustomizationFile.notIndexDirectory.iterator();
+            while (it.hasNext()) {
+            	Object temp = it.next();
+            	if(!oldNotIndexDirectory.contains(temp)) {
+            		updateIndex(temp.toString(),2);
+            	}
+            	
+            }
+            it = oldNotIndexDirectory.iterator();
+            while (it.hasNext()) {
+            	Object temp = it.next();
+            	if(ReadCustomizationFile.notIndexDirectory.contains(temp)) {
+            		updateIndex(temp.toString(),1);
+            	}
+            	
+            }
+            synchronized(WatchDir.keys) {
+            	it = ReadCustomizationFile.criticalDirectory.iterator();
+                while (it.hasNext()) {
+                	Object temp = it.next();
+                	if(!oldCriticalDirectory.contains(temp)) {
+                		Path dir =	Paths.get(it.next().toString());
+                    	if(Files.readAttributes(dir, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory())
+                    		WatchDir.registerAll(dir);
+                    	else 
+                    		WatchDir.register(dir);
+                	}
+                	
+                }
+                it = oldCriticalDirectory.iterator();
+                while (it.hasNext()) {
+                	Object temp = it.next();
+                	if(ReadCustomizationFile.notIndexDirectory.contains(temp)) {
+                		Files.walkFileTree(Paths.get(temp.toString()), new SimpleFileVisitor<Path>() {
+                            @Override
+                            public FileVisitResult preVisitDirectory(Path dir,BasicFileAttributes attrs) {
+                                try {
+                                	Collection<Path> values=WatchDir.keys.values();
+                                	Set<WatchKey> keys=WatchDir.keys.keySet();
+                                	Iterator<Path> it1=values.iterator();
+                                	Iterator<WatchKey> it2=keys.iterator();
+                                	while(it1.hasNext()){
+                                		WatchKey key=it2.next();
+                                		Path path=it1.next();
+                                		if(path.equals(dir)){
+                                			WatchDir.keys.remove(key);
+                                			break;
+                                		}
+                                	}
+                                } catch (Exception x) {}
+                                return FileVisitResult.CONTINUE;            
+                            }
+                        });
+                	}
+                	
+                }
+            }
+    	}
+    	
+    }
+    private void updateIndex(String path,int opt){
+    	try{
+    		if(opt==1){
+    			File file=new File(path);
+            	if (file.isDirectory()) {
+            		String[] files = file.list();
+            		if (files != null) {
+            			for (int i = 0; i < files.length; i++) {
+            				updateIndex(files[i],2);
+            		    }
+            		}
+            	}
+            	else{
+            		InitializeWriter.writer.addDocument(IndexFiles.getDocument(file));
+            	}
+    		}
+    		else if(opt==2){
+    			File file=new File(path);
+            	if (file.isDirectory()) {
+            		String[] files = file.list();
+            		if (files != null) {
+            			for (int i = 0; i < files.length; i++) {
+            				updateIndex(files[i],2);
+            		    }
+            		}
+            	}
+            	else{
+            		Term term=new Term("path",file.getCanonicalPath());
+                	InitializeWriter.writer.deleteDocuments(term);
+                	InitializeWriter.writer.commit();
+                	InitializeWriter.writer.optimize();
+            	}
+    		}
+    	}
+    	catch(Exception e){}
+    }
+    
+    
     private void jButtonCancelMouseClicked(java.awt.event.MouseEvent evt) {
-    	System.exit(0);
+    	this.setVisible(false);
     }
     
     private void createXML() throws Exception{
@@ -304,12 +404,12 @@ public class CustomizationUI extends javax.swing.JFrame {
         FileWriter fWriter = new FileWriter("optionFile.xml");
 		BufferedWriter bufferWriter = new BufferedWriter(fWriter);
 		bufferWriter.write(sw.toString());
-		bufferWriter.close();
+		bufferWriter.close();		
     }
 
     private JFileChooser jFileChooser;
-    DefaultListModel modelCritical;
-    DefaultListModel modelNotIndex;
+    DefaultListModel<String> modelCritical;
+    DefaultListModel<String> modelNotIndex;
     private JButton jButtonCritical;
     private JButton jButtonNotIndex;
     private JButton jButtonReIndex;

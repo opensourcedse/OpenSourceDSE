@@ -217,8 +217,6 @@ public class SearchFiles {
 		      } 
 	        if(numTotalHits > 10) 
 	        	SearchGui.nextButton.setEnabled(true);
-	        if(numTotalHits > 20)
-	        	SearchGui.jumpButton.setEnabled(true);
 	      }
 	  dse.SearchGui.resultArea.append("\n\nEnter the page number and Press next to jump");
   }

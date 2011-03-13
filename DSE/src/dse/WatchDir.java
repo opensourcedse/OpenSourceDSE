@@ -6,10 +6,13 @@ import static java.nio.file.LinkOption.*;
 import java.nio.file.attribute.*;
 import java.io.*;
 import java.util.*;
+
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.KeepOnlyLastCommitDeletionPolicy;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
@@ -24,25 +27,17 @@ import org.apache.lucene.util.Version;
 
 public class WatchDir {
 
-    private final WatchService watcher;
-    private final Map<WatchKey,Path> keys;
-    private final boolean recursive;
-    private boolean trace = false;
-    static int numTotalHits;
-    static ScoreDoc[] hits;
-    static TopScoreDocCollector collector = TopScoreDocCollector.create(5 * 10, false);
-    static final File INDEX_DIR = new File("index");
-    IndexWriter writer;
+    private static WatchService watcher;
+    public static Map<WatchKey,Path> keys;
+    private static boolean trace = true;
+
     
     @SuppressWarnings("unchecked")
     static <T> WatchEvent<T> cast(WatchEvent<?> event) {
         return (WatchEvent<T>)event;
     }
 
-    /**
-     * Register the given directory with the WatchService
-     */
-    private void register(Path dir) throws IOException {
+    public static void register(Path dir) throws IOException {
         WatchKey key = dir.register(watcher, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
         if (trace) {
             Path prev = keys.get(key);
@@ -57,11 +52,7 @@ public class WatchDir {
         keys.put(key, dir);
     }
 
-    /**
-     * Register the given directory, and all its sub-directories, with the
-     * WatchService.
-     */
-    private void registerAll(final Path start) throws IOException {
+    public static void registerAll(final Path start) throws IOException {
         // register directory and sub-directories
         Files.walkFileTree(start, new SimpleFileVisitor<Path>() {
             @Override
@@ -71,81 +62,74 @@ public class WatchDir {
                 } catch (IOException x) {
                     throw new IOError(x);
                 }
-                return FileVisitResult.CONTINUE;
-            }
+                return FileVisitResult.CONTINUE;            }
         });
     }
     
 
     private void updateIndex(Path child,int check) {
+        int numTotalHits=0;
+        TopScoreDocCollector collector = TopScoreDocCollector.create(1, false);
     	try {
-    		if (INDEX_DIR.exists()) { 
-    			writer = new IndexWriter(FSDirectory.open(INDEX_DIR,new SimpleFSLockFactory()), new StandardAnalyzer(Version.LUCENE_CURRENT),false,IndexWriter.MaxFieldLength.LIMITED);
+    	synchronized(InitializeWriter.writer) {
+    		if(check == 1) {
+    			try{
+    				System.out.println(child);
+    				final File file = new File(child.toString());
+    				Document doc = new Document();
+    	        	  IndexReader reader = IndexReader.open(InitializeWriter.fsdDirIndex, true); 
+    	        	  IndexSearcher searcher = new IndexSearcher(reader);
+    	        	  
+    	        	  BooleanQuery query = new BooleanQuery();
+    	        	  query.add(new TermQuery(new Term("path",file.getCanonicalPath())),BooleanClause.Occur.MUST); 
+    	        	  searcher.search(query, collector);
+    	        	  numTotalHits = collector.getTotalHits();
+    				if(numTotalHits== 0) {
+    					System.out.println(file.lastModified());
+    					InitializeWriter.writer.addDocument(IndexFiles.getDocument(file));
+    				}
+    				else {
+    					doc = searcher.doc(0);
+    					String lastModifiedOld = doc.get("lastModified");
+    					String lastModifiedNew = Long.toString(file.lastModified()); 
+    					if(lastModifiedOld.compareTo(lastModifiedNew)!=0) {
+    						InitializeWriter.writer.updateDocument(new Term("path",file.getCanonicalPath()), IndexFiles.getDocument(file));
+    					}
+    				}
+    				InitializeWriter.writer.commit();
+    				InitializeWriter.writer.optimize();
+    			}catch(Exception e){}
     		}
-    		else if(!INDEX_DIR.exists()) {  	
-    			writer = new IndexWriter(FSDirectory.open(INDEX_DIR,new SimpleFSLockFactory()), new StandardAnalyzer(Version.LUCENE_CURRENT),true,IndexWriter.MaxFieldLength.LIMITED);
+    		else if(check == 2) {
+    			try {
+    				System.out.println(child);
+    				InitializeWriter.writer.deleteDocuments(new Term("path",child.toString()));
+    				InitializeWriter.writer.commit();
+    				InitializeWriter.writer.optimize();
+    			}catch(Exception e){System.out.println(e.getMessage());}
     		}
-    	}catch(IOException e){System.out.println(e.getMessage());}
-    	if(check == 1) {
-    	try{
-    		System.out.println(child);
-    		final File file = new File(child.toString());
-    		Document doc = new Document();
-      	    BooleanQuery query = new BooleanQuery();
-      	    query.add(new TermQuery(new Term("path",file.getCanonicalPath())),BooleanClause.Occur.MUST); 
-      	    IndexReader reader = IndexReader.open(FSDirectory.open(new File("index")), true); 
-      	    Searcher searcher = new IndexSearcher(reader);
-      	    searcher.search(query, collector);
-      	    numTotalHits = collector.getTotalHits();
-      	    if(numTotalHits== 0) {
-      		    System.out.println(file.lastModified());
-      		    writer.addDocument(IndexFiles.getDocument(file));
-      	    }
-      	  else {
-      		  hits = collector.topDocs().scoreDocs;
-      		  doc = searcher.doc(hits[0].doc);
-      		  String lastModifiedOld = doc.get("lastModified");
-      		  String lastModifiedNew = Long.toString(file.lastModified()); 
-      		  if(lastModifiedOld.compareTo(lastModifiedNew)!=0) {
-      			  writer.updateDocument(new Term("path",file.getCanonicalPath()), IndexFiles.getDocument(file));
-      		  }
-      	  }
-    		writer.commit();
-    	}catch(Exception e){}
     	}
-    	else if(check == 2) {
-    		try {
-        		System.out.println(child);
-        		writer.deleteDocuments(new Term("path",child.toString()));
-        		writer.commit();
-        	}catch(Exception e){System.out.println(e.getMessage());}
-        }
-    	try {
-            writer.close();
-        }catch(Exception e){System.out.println(e.getMessage());}
+    	}catch(Exception e){}
     }
     /**
      * Creates a WatchService and registers the given directory
      */
-    public WatchDir(Path dir, boolean recursive) throws IOException {
+    public WatchDir() throws IOException {
         this.watcher = FileSystems.getDefault().newWatchService();
         this.keys = new HashMap<WatchKey,Path>();
-        this.recursive = recursive;
-
-        if (recursive) {
-            System.out.format("Scanning %s ...\n", dir);
-            registerAll(dir);
-            System.out.println("Done.");
-        } else {
-            register(dir);
+        
+        Iterator it = ReadCustomizationFile.criticalDirectory.iterator();
+        while (it.hasNext()) {
+        	Path dir =	Paths.get(it.next().toString());
+        	if(Files.readAttributes(dir, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory())
+        		registerAll(dir);
+        	else 
+        		register(dir);
         }
-        // enable trace after initial registration
+        System.out.println("Done.");
         this.trace = true;
     }
 
-    /**
-     * Process all events for keys queued to the watcher
-     */
     public void processEvents() {
     	
         for (;;) {
@@ -153,7 +137,7 @@ public class WatchDir {
             // wait for key to be signalled
             WatchKey key;
             try {
-                key = watcher.take();
+            	key = watcher.take();
             } catch (InterruptedException x) {
             	System.out.println(x.getMessage());
                 return;
@@ -183,36 +167,30 @@ public class WatchDir {
 
                 // if directory is created, and watching recursively, then
                 // register it and its sub-directories
-                if (recursive && (kind == ENTRY_CREATE)) {
+                if ((kind == ENTRY_CREATE)) {
                     try {
                         if (Files.readAttributes(child, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory()) {
                             registerAll(child);
                         }
                         else{
-                        	if(!child.toString().endsWith("#")){
                         		updateIndex(child,1);
                         		register(child);
-                        	}
                         }
                     } catch (IOException x){System.out.println(x.getMessage());} {
                         // ignore to keep sample readbale
                     }
                 }
-                else if(recursive && (kind==ENTRY_MODIFY)){
+                else if((kind==ENTRY_MODIFY)){
                 	try {
-                		if (Files.readAttributes(child, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory()) {
-                			if(!child.toString().endsWith("#"))
+                		if (!Files.readAttributes(child, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory()) {
                 				updateIndex(child,1);
                 		}
                 	}catch(Exception e){}
                 }
-                else if(recursive && (kind==ENTRY_DELETE)) {
+                else if((kind==ENTRY_DELETE)) {
                 	try {
-                		if (Files.readAttributes(child, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory()) {
-                			if(!child.toString().endsWith("#"))
-                				updateIndex(child,2);
-                		}
-                	}catch(Exception e){}
+                		updateIndex(child,2);
+                	}catch(Exception e){System.out.println(e.getMessage());}
                 }
             }
 
@@ -220,11 +198,6 @@ public class WatchDir {
             boolean valid = key.reset();
             if (!valid) {
                 keys.remove(key);
-
-                // all directories are inaccessible
-                if (keys.isEmpty()) {
-                    break;
-                }
             }
         }
         

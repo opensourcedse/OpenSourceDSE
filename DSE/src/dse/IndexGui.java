@@ -12,13 +12,14 @@ public class IndexGui extends javax.swing.JFrame {
     
     private void initComponents() {
     	jFileChooser  = new JFileChooser();
+    	jFileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         indexText = new JTextField();
         indexButton = new JButton();
         cancelButton = new JButton();
         browseButton = new JButton();
        
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Find");
+        setTitle("Index");
 
         indexButton.setText("Index");
 
@@ -75,6 +76,7 @@ public class IndexGui extends javax.swing.JFrame {
 
         pack();
     }
+  
     private void browseButtonMouseClicked(java.awt.event.MouseEvent evt) {
     	int check = jFileChooser.showOpenDialog(this);
 		if(check == jFileChooser.APPROVE_OPTION) {
@@ -84,11 +86,15 @@ public class IndexGui extends javax.swing.JFrame {
     }
 
     private void indexButtonMouseClicked(java.awt.event.MouseEvent evt) {
-    	dse.IndexFiles.indexer(indexText.getText());
+    	IndexFiles.indexer(indexText.getText());
     }
 
     private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {
+    	try {
+    		InitializeWriter.writer.close();
+    	}catch(Exception e){}
     	System.exit(0);
+    	
     }
     private JFileChooser jFileChooser;
     private JButton browseButton;

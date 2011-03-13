@@ -1,37 +1,42 @@
-
 package dse;
 
+import static java.nio.file.LinkOption.NOFOLLOW_LINKS;
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.KeepOnlyLastCommitDeletionPolicy;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.store.*;
 import org.apache.lucene.util.Version;
 import java.io.*;
-import java.util.Date;
-import org.apache.lucene.document.Document;
+import java.util.*;
+import org.apache.tika.metadata.*;
+import org.apache.tika.parser.*;
 import org.xml.sax.ContentHandler;
 import org.apache.tika.sax.*;
-import java.util.*;
-import org.apache.tika.parser.*;
-import org.apache.tika.parser.txt.*;
-import org.apache.tika.metadata.*;
-import org.apache.*;
 import org.apache.lucene.document.*;
-import org.apache.log4j.Logger;
+import org.apache.tika.config.TikaConfig;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.search.*;
+import org.apache.lucene.search.TermQuery;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.LinkOption.*;
+import java.nio.file.attribute.*;
+import org.apache.commons.io.FileUtils;
 
-public class IndexFiles extends SearchGui {
+
+public class IndexFiles {
   
   IndexFiles() {}
-  //final static Logger log4j = Logger.getLogger(IndexFiles.class);
-  static IndexWriter writer;
-  static final File INDEX_DIR = new File("index");
-  static long percentageIndex;
-  static long totalIndex;
-  static int numTotalHits;
-  static ScoreDoc[] hits;
-  static TopScoreDocCollector collector = TopScoreDocCollector.create(5 * 10, false);
+  public static boolean flag = false;
+  static double percentageIndex = 0;
+  static double totalIndex;
+  static double percentage = 1;
   static Set<String> textualMetadataFields = new HashSet<String>();
   static {
 	  textualMetadataFields.add(Metadata.TITLE);
@@ -45,7 +50,6 @@ public class IndexFiles extends SearchGui {
 
   public static void indexer(String folder) {
     final File docDir = new File(folder);
-    totalIndex = docDir.getTotalSpace();
     if (!docDir.exists() || !docDir.canRead()) {
       System.out.println("Document directory '" +docDir.getAbsolutePath()+ "' does not exist or is not readable, please check the path");
       System.exit(1);
@@ -53,18 +57,15 @@ public class IndexFiles extends SearchGui {
    
     Date start = new Date();
     try {
-    	if (INDEX_DIR.exists()) { 
-    		writer = new IndexWriter(FSDirectory.open(INDEX_DIR,new SimpleFSLockFactory()), new StandardAnalyzer(Version.LUCENE_CURRENT),false,IndexWriter.MaxFieldLength.LIMITED);
-		}
-		else if(!INDEX_DIR.exists()) {  	
-			writer = new IndexWriter(FSDirectory.open(INDEX_DIR,new SimpleFSLockFactory()), new StandardAnalyzer(Version.LUCENE_CURRENT),true,IndexWriter.MaxFieldLength.LIMITED);
-		}
-        System.out.println("Indexing to directory '" +INDEX_DIR+ "'...");
-        indexDocs(writer, docDir);
-        //log4j.debug("WTF?");
+    	
+    	InitializeWriter.writer.setMergeFactor(2);
+        System.out.println("Indexing to directory '" +InitializeWriter.INDEX_DIR+ "'...");
+        if(docDir.isDirectory())
+        	totalIndex = FileUtils.sizeOfDirectory(docDir);
+        indexDocs(InitializeWriter.writer, docDir);
         System.out.println("Optimizing...");
-        writer.optimize();
-        writer.close();
+        InitializeWriter.writer.optimize();
+        InitializeWriter.writer.close();
         Date end = new Date();
         System.out.println(end.getTime() - start.getTime() + " total milliseconds");
     } catch (IOException e) {
@@ -83,7 +84,6 @@ public class IndexFiles extends SearchGui {
 	  context.set(Parser.class, parser);
 	  try {
 		  parser.parse(is, handler, metadata,context);
-		  System.out.println(metadata);
 	  } finally {
 		  is.close();
 	  }
@@ -115,60 +115,61 @@ public class IndexFiles extends SearchGui {
 	  else {
 		  doc.add(new Field("path", f.getCanonicalPath(),Field.Store.YES,Field.Index.NOT_ANALYZED));
 	  }
-		  
+
 	  doc.add(new Field("lastModified", Long.toString(f.lastModified()),Field.Store.YES, Field.Index.NOT_ANALYZED));
 	return doc;
 }
  
   public static void indexDocs(IndexWriter writer, File file)
     throws IOException {
-    // do not try to index files that cannot be rea
+	  int numTotalHits;
+	  TopScoreDocCollector collector = TopScoreDocCollector.create(1, false);
     if (file.canRead()) {
-      if (file.isDirectory()) {
-    	  String[] files = file.list();
-    	  // an IO error could occur
-    	  if (files != null) {
-    		  for (int i = 0; i < files.length; i++) {
-    			  indexDocs(writer, new File(files[i]));
-    		  }
-    	  }
-      	  } else {
-      	  System.out.println("adding " + file);
-          try {
-        	  Document doc = new Document();
-        	  BooleanQuery query = new BooleanQuery();
-        	  query.add(new TermQuery(new Term("path",file.getCanonicalPath())),BooleanClause.Occur.MUST); 
-        	  IndexReader reader = IndexReader.open(FSDirectory.open(new File("index")), true); 
-        	  Searcher searcher = new IndexSearcher(reader);
-        	  searcher.search(query, collector);
-        	  numTotalHits = collector.getTotalHits();
-        	  if(numTotalHits== 0) {
-        		  System.out.println(file.lastModified());
-        		  writer.addDocument(getDocument(file));
-        	  }
-        	  else {
-        		  hits = collector.topDocs().scoreDocs;
-        		  doc = searcher.doc(hits[0].doc);
-        		  String lastModifiedOld = doc.get("lastModified");
-        		  String lastModifiedNew = Long.toString(file.lastModified()); 
-        		  if(lastModifiedOld.compareTo(lastModifiedNew)!=0) {
-        			  writer.updateDocument(new Term("path",file.getCanonicalPath()), getDocument(file));
-        		  }
-        	  }
-        	  if(false) {
-        		  writer.deleteDocuments(new Term("path",file.getCanonicalPath()));
-        	  }
-        	  percentageIndex += file.getTotalSpace();
-        	  if(percentageIndex/totalIndex >= 0.5) {
-        		  writer.commit();
-        		  percentageIndex=0;
-        	  }
-          }
-          catch (Exception fnfe) {
-          System.out.println(fnfe.getMessage());
-        }
-      }
+    	if(!ReadCustomizationFile.criticalDirectory.contains(file.getCanonicalPath())) {
+    		if (file.isDirectory()) {
+    	    	  
+    	    	  String[] files = file.list();
+    	    	  if (files != null) {
+    	    		  for (int i = 0; i < files.length; i++) {
+    	    			  indexDocs(writer, new File(file, files[i]));
+    	    		  }
+    	    	  }
+    	      	  } else {
+    	      	  System.out.println("adding " + file);
+    	          try {
+    	        	  Document doc = new Document();
+    	        	  IndexReader reader = IndexReader.open(InitializeWriter.fsdDirIndex, true); 
+    	        	  IndexSearcher searcher = new IndexSearcher(reader);
+    	        	  
+    	        	  BooleanQuery query = new BooleanQuery();
+    	        	  query.add(new TermQuery(new Term("path",file.getCanonicalPath())),BooleanClause.Occur.MUST); 
+    	        	  searcher.search(query, collector);
+    	        	  numTotalHits = collector.getTotalHits();
+    	        	  synchronized(writer){
+    	        		  if(numTotalHits== 0) {
+    	        			  writer.addDocument(getDocument(file));
+    	        		  }
+    	        		  else {
+    	        			  doc = searcher.doc(0);
+    	        			  String lastModifiedOld = doc.get("lastModified");
+    	        			  String lastModifiedNew = Long.toString(file.lastModified()); 
+    	        			  if(lastModifiedOld.compareTo(lastModifiedNew)!=0) {
+    	        				  writer.updateDocument(new Term("path",file.getCanonicalPath()), getDocument(file));
+    	        			  }
+    	        		  }
+    	        	  }
+    	          }
+    	          catch (Exception fnfe) {
+    	          System.out.println(fnfe.getMessage());
+    	         } 
+    	    	  percentageIndex+=file.length();
+    	    	  if((percentageIndex/totalIndex) >= 0.01) {
+    	    		  writer.optimize();
+    	    		  writer.commit();
+    	    		  percentageIndex=0;
+    	    	  }
+    	      }
+    	    }
+    	}
     }
-  }
-  
 }
