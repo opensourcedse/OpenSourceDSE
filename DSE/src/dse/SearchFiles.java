@@ -1,11 +1,8 @@
 package dse;
 
 import java.awt.FlowLayout;
-import org.apache.lucene.search.BooleanClause;
-import org.apache.lucene.search.BooleanQuery;
 import java.awt.Image;
 import java.io.File;
-import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.index.Term;
 import java.io.IOException;
 import javax.swing.*;
@@ -25,9 +22,7 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.FuzzyTermEnum;
-import org.apache.lucene.index.Term;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.Parser;
 
 	
 public class SearchFiles {
@@ -61,14 +56,13 @@ public class SearchFiles {
       if(line.contains(":")) {
     	  int position;
     	  position=line.indexOf(":");
-    	  String abd = new String();
     	  field=line.substring(0,position);
     	  line=line.substring(position+1);
     	  line = line.toLowerCase();
       }
       searcher = new IndexSearcher(reader);
-      Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_CURRENT);
-      parser = new QueryParser(Version.LUCENE_CURRENT, field, analyzer);
+      Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_30);
+      parser = new QueryParser(Version.LUCENE_30, field, analyzer);
       
       SearchGui.resultArea.append("Searching for: " + line+"\n");
 

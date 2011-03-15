@@ -1,7 +1,6 @@
 package dse;
 
 import javax.swing.*;
-import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
@@ -17,7 +16,7 @@ public class SearchGui extends JFrame {
     }
     
     private void initComponents() {
-    	model = new DefaultListModel();
+    	model = new DefaultListModel<JPanel>();
         jLabel1 = new JLabel();
         queryText = new JTextField();
         searchButton = new JButton();
@@ -25,7 +24,7 @@ public class SearchGui extends JFrame {
         previousButton = new JButton();
         cancelButton = new JButton();
         jScrollPane1 = new JScrollPane();
-        resultList = new JList(model);
+        resultList = new JList<JPanel>(model);
         jScrollPane2 = new JScrollPane();
         resultArea = new JTextArea();
         
@@ -185,11 +184,12 @@ public class SearchGui extends JFrame {
     public static JButton previousButton;
     public static JTextField queryText;
     public static JTextArea resultArea;
-    private JList resultList;
+    private JList<JPanel> resultList;
     private JButton searchButton;
-    static DefaultListModel model;
+    static DefaultListModel<JPanel> model;
     TrayIcon trayIcon;
     SystemTray tray; 
+    static final long serialVersionUID = 1;
   
     public class MyKeyListener extends KeyAdapter{
         public void keyPressed(KeyEvent ke){

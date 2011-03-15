@@ -1,4 +1,5 @@
 
+import dse.*;
 import java.awt.AWTException;
 import java.awt.Image;
 import java.awt.MenuItem;
@@ -17,11 +18,18 @@ public class DSEDaemon extends Thread {
 	
 	static TrayIcon trayIcon;
 	static SystemTray tray;
-	DSEDaemon(String name) {
+	static PopupMenu popup = new PopupMenu();
+	static MenuItem exit = new MenuItem("Exit");
+	static MenuItem customize = new MenuItem("Options");
+	static MenuItem index = new MenuItem("Re-Index");
+	static MenuItem search = new MenuItem("Search");
+	static MenuItem indexStatus = new MenuItem("IndexStatus");
+	static MenuItem about = new MenuItem("About");
+    
+    DSEDaemon(String name) {
 		this.setName(name);
 	}
-	public void run() {
-		
+	public void run() {	
 		System.out.println(Thread.currentThread());
 		if(this.getName().equalsIgnoreCase("IndexMain"))
 			IndexMain.main(null);
@@ -41,71 +49,69 @@ public class DSEDaemon extends Thread {
 			}
 	}
 
-	ActionListener exitListener = new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-	        System.out.println("Exiting...");
-	        System.exit(0);
-	    }
-	};
-	ActionListener actionListener = new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-	        trayIcon.displayMessage("Action Event","An Action Event Has Been Performed!",
-	                TrayIcon.MessageType.INFO);
-	    }
-	};
-	ActionListener customizeListener = new ActionListener() {  
-	    public void actionPerformed(ActionEvent e) {
-	    	DSEDaemon thread4 = new DSEDaemon("CustomizationMain");
-	    	thread4.start();
-	    }  	   
-	};  
-	ActionListener indexListener = new ActionListener() {  
-	    public void actionPerformed(ActionEvent e) {
-	    	DSEDaemon thread3 = new DSEDaemon("IndexMain");
-	    	thread3.start();
-	    }  	   
-	};
-	ActionListener searchListener = new ActionListener() {  
-	    public void actionPerformed(ActionEvent e) {
-	    	DSEDaemon thread5 = new DSEDaemon("SearchMain");
-	    	thread5.start();
-	    }  	   
-	}; 
-	
-	MouseListener mouseListener = new MouseListener() {
-        
-        public void mouseClicked(MouseEvent e) {
-            System.out.println("Tray Icon - Mouse clicked!");  
-        }
+	public static void go() {
+		
+		MouseListener mouseListener = new MouseListener() {
+	        
+	        public void mouseClicked(MouseEvent e) {
+	            System.out.println("Tray Icon - Mouse clicked!");
+	            index.setEnabled(IndexGui.flag);	
+	        }
 
-        public void mouseEntered(MouseEvent e) {
-            System.out.println("Tray Icon - Mouse entered!");                 
-        }
+	        public void mouseEntered(MouseEvent e) {
+	            System.out.println("Tray Icon - Mouse entered!");                 
+	        }
 
-        public void mouseExited(MouseEvent e) {
-            System.out.println("Tray Icon - Mouse exited!");                 
-        }
+	        public void mouseExited(MouseEvent e) {
+	            System.out.println("Tray Icon - Mouse exited!");                 
+	        }
 
-        public void mousePressed(MouseEvent e) {
-            System.out.println("Tray Icon - Mouse pressed!");                 
-        }
+	        public void mousePressed(MouseEvent e) {
+	            System.out.println("Tray Icon - Mouse pressed!");                 
+	        }
 
-        public void mouseReleased(MouseEvent e) {
-            System.out.println("Tray Icon - Mouse released!");                 
-        }
-    };
-	public void go() {
+	        public void mouseReleased(MouseEvent e) {
+	            System.out.println("Tray Icon - Mouse released!");                 
+	        }
+	    };
+		ActionListener exitListener = new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        System.out.println("Exiting...");
+		        try {
+		        	InitializeWriter.writer.close();
+		        }catch(Exception em){}	        
+		        System.exit(0);
+		    }
+		};
+		ActionListener actionListener = new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        trayIcon.displayMessage("Action Event","An Action Event Has Been Performed!",
+		                TrayIcon.MessageType.INFO);
+		    }
+		};
+		ActionListener customizeListener = new ActionListener() {  
+		    public void actionPerformed(ActionEvent e) {
+		    	DSEDaemon thread4 = new DSEDaemon("CustomizationMain");
+		    	ReadCustomizationFile.main(null);
+		    	thread4.start();
+		    }  	   
+		};  
+		ActionListener indexListener = new ActionListener() {  
+		    public void actionPerformed(ActionEvent e) {
+		    	DSEDaemon thread3 = new DSEDaemon("IndexMain");
+		    	thread3.start();
+		    }  	   
+		};
+		ActionListener searchListener = new ActionListener() {  
+		    public void actionPerformed(ActionEvent e) {
+		    	DSEDaemon thread5 = new DSEDaemon("SearchMain");
+		    	thread5.start();
+		    }  	   
+		}; 
 		try {
 			if (SystemTray.isSupported()) {
 		    tray = SystemTray.getSystemTray();
 		    Image image = Toolkit.getDefaultToolkit().getImage("tray.gif");
-		    PopupMenu popup = new PopupMenu();
-		    MenuItem exit = new MenuItem("Exit");
-		    MenuItem customize = new MenuItem("Options");
-		    MenuItem index = new MenuItem("Re-Index");
-		    MenuItem search = new MenuItem("Search");
-		    MenuItem indexStatus = new MenuItem("IndexStatus");
-		    MenuItem about = new MenuItem("About");
 		    exit.addActionListener(exitListener);
 		    customize.addActionListener(customizeListener);
 		    index.addActionListener(indexListener);
@@ -142,10 +148,8 @@ public class DSEDaemon extends Thread {
 	public static void main(String[] args) {
 		new DSEDaemon("hello").go();
 		DSEDaemon thread1 = new DSEDaemon("InitializeWriter");
-		DSEDaemon thread2 = new DSEDaemon("ReadCustomizationFile");
-		DSEDaemon thread6 = new DSEDaemon("WatchDirMain");
+		DSEDaemon thread2 = new DSEDaemon("WatchDirMain");
 		thread1.start();
 		thread2.start();
-		thread6.start();
 	}
 }

@@ -1,204 +1,464 @@
-[2011-03-11 15:00:38,766]DEBUG 11484[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,766]DEBUG 11484[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{ET}
-[2011-03-11 15:00:38,767]DEBUG 11485[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{q}
-[2011-03-11 15:00:38,767]DEBUG 11485[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.64705}
-[2011-03-11 15:00:38,767]DEBUG 11485[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.71372}
-[2011-03-11 15:00:38,767]DEBUG 11485[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.77647}
-[2011-03-11 15:00:38,767]DEBUG 11485[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{rg}
-[2011-03-11 15:00:38,768]DEBUG 11486[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.64705}
-[2011-03-11 15:00:38,768]DEBUG 11486[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.71372}
-[2011-03-11 15:00:38,768]DEBUG 11486[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.77647}
-[2011-03-11 15:00:38,768]DEBUG 11486[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{RG}
-[2011-03-11 15:00:38,768]DEBUG 11486[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,768]DEBUG 11486[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{579.266}
-[2011-03-11 15:00:38,769]DEBUG 11487[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.0}
-[2011-03-11 15:00:38,769]DEBUG 11487[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{-9.86}
-[2011-03-11 15:00:38,769]DEBUG 11487[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{re}
-[2011-03-11 15:00:38,769]DEBUG 11487[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{b}
-[2011-03-11 15:00:38,769]DEBUG 11487[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Q}
-[2011-03-11 15:00:38,769]DEBUG 11487[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{BT}
-[2011-03-11 15:00:38,770]DEBUG 11488[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSName{F9}
-[2011-03-11 15:00:38,770]DEBUG 11488[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{10.0}
-[2011-03-11 15:00:38,770]DEBUG 11488[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tf}
-[2011-03-11 15:00:38,770]DEBUG 11488[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,770]DEBUG 11488[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,770]DEBUG 11488[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,771]DEBUG 11489[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,771]DEBUG 11489[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,771]DEBUG 11489[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{571.976}
-[2011-03-11 15:00:38,771]DEBUG 11489[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,771]DEBUG 11489[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{title:(+return}, COSFloat{-600.0}, COSString{+"pink}, COSFloat{-600.0}, COSString{panther")}]}
-[2011-03-11 15:00:38,772]DEBUG 11490[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,772]DEBUG 11490[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{ET}
-[2011-03-11 15:00:38,772]DEBUG 11490[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{q}
-[2011-03-11 15:00:38,772]DEBUG 11490[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.89803}
-[2011-03-11 15:00:38,772]DEBUG 11490[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.89411}
-[2011-03-11 15:00:38,773]DEBUG 11491[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.85098}
-[2011-03-11 15:00:38,773]DEBUG 11491[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{rg}
-[2011-03-11 15:00:38,773]DEBUG 11491[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.89803}
-[2011-03-11 15:00:38,773]DEBUG 11491[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.89411}
-[2011-03-11 15:00:38,773]DEBUG 11491[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.85098}
-[2011-03-11 15:00:38,773]DEBUG 11491[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{RG}
-[2011-03-11 15:00:38,774]DEBUG 11492[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,774]DEBUG 11492[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.406}
-[2011-03-11 15:00:38,774]DEBUG 11492[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.0}
-[2011-03-11 15:00:38,774]DEBUG 11492[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{-15.134}
-[2011-03-11 15:00:38,776]DEBUG 11494[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{re}
-[2011-03-11 15:00:38,776]DEBUG 11494[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{b}
-[2011-03-11 15:00:38,777]DEBUG 11495[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Q}
-[2011-03-11 15:00:38,777]DEBUG 11495[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{BT}
-[2011-03-11 15:00:38,777]DEBUG 11495[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSName{F7}
-[2011-03-11 15:00:38,777]DEBUG 11495[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{14.0}
-[2011-03-11 15:00:38,777]DEBUG 11495[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tf}
-[2011-03-11 15:00:38,778]DEBUG 11496[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,778]DEBUG 11496[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,778]DEBUG 11496[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,778]DEBUG 11496[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,778]DEBUG 11496[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,778]DEBUG 11496[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{546.542}
-[2011-03-11 15:00:38,779]DEBUG 11497[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,779]DEBUG 11497[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{8.}, COSFloat{-250.0}, COSString{Escaping}, COSFloat{-250.0}, COSString{Special}, COSFloat{-250.0}, COSString{Characters}]}
-[2011-03-11 15:00:38,779]DEBUG 11497[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,779]DEBUG 11497[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{ET}
-[2011-03-11 15:00:38,779]DEBUG 11497[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{q}
-[2011-03-11 15:00:38,780]DEBUG 11498[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,780]DEBUG 11498[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{g}
-[2011-03-11 15:00:38,780]DEBUG 11498[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,780]DEBUG 11498[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{G}
-[2011-03-11 15:00:38,780]DEBUG 11498[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,781]DEBUG 11499[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{538.272}
-[2011-03-11 15:00:38,781]DEBUG 11499[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.0}
-[2011-03-11 15:00:38,781]DEBUG 11499[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{-99.86}
-[2011-03-11 15:00:38,781]DEBUG 11499[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{re}
-[2011-03-11 15:00:38,781]DEBUG 11499[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{b}
-[2011-03-11 15:00:38,781]DEBUG 11499[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Q}
-[2011-03-11 15:00:38,782]DEBUG 11500[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{BT}
-[2011-03-11 15:00:38,782]DEBUG 11500[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSName{F5}
-[2011-03-11 15:00:38,782]DEBUG 11500[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{12.0}
-[2011-03-11 15:00:38,782]DEBUG 11500[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tf}
-[2011-03-11 15:00:38,783]DEBUG 11501[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,783]DEBUG 11501[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,783]DEBUG 11501[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,783]DEBUG 11501[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,783]DEBUG 11501[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,784]DEBUG 11502[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{524.876}
-[2011-03-11 15:00:38,784]DEBUG 11502[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,784]DEBUG 11502[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{Lucene}, COSFloat{-250.0}, COSString{supports}, COSFloat{-250.0}, COSString{escaping}, COSFloat{-250.0}, COSString{special}, COSFloat{-250.0}, COSString{characters}, COSFloat{-250.0}, COSString{that}, COSFloat{-250.0}, COSString{are}, COSFloat{-250.0}, COSString{part}, COSFloat{-250.0}, COSString{of}, COSFloat{-250.0}, COSString{the}, COSFloat{-250.0}, COSString{query}, COSFloat{-250.0}, COSString{syntax.}, COSFloat{-250.0}, COSString{The}, COSFloat{-250.0}, COSString{current}, COSFloat{-250.0}, COSString{list}]}
-[2011-03-11 15:00:38,784]DEBUG 11502[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,785]DEBUG 11503[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,785]DEBUG 11503[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,785]DEBUG 11503[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,785]DEBUG 11503[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,786]DEBUG 11504[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,786]DEBUG 11504[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{511.676}
-[2011-03-11 15:00:38,787]DEBUG 11505[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,787]DEBUG 11505[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{special}, COSFloat{-250.0}, COSString{characters}, COSFloat{-250.0}, COSString{are}]}
-[2011-03-11 15:00:38,787]DEBUG 11505[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,787]DEBUG 11505[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,788]DEBUG 11506[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,788]DEBUG 11506[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,788]DEBUG 11506[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,788]DEBUG 11506[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,788]DEBUG 11506[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{490.476}
-[2011-03-11 15:00:38,789]DEBUG 11507[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,789]DEBUG 11507[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{+}, COSFloat{-250.0}, COSString{-}, COSFloat{-250.0}, COSString{&&}, COSFloat{-250.0}, COSString{||}, COSFloat{-250.0}, COSString{!}, COSFloat{-250.0}, COSString{(}, COSFloat{-250.0}, COSString{)}, COSFloat{-250.0}, COSString{{}, COSFloat{-250.0}, COSString{}}, COSFloat{-250.0}, COSString{[}, COSFloat{-250.0}, COSString{]}, COSFloat{-250.0}, COSString{^}, COSFloat{-250.0}, COSString{"}, COSFloat{-250.0}, COSString{~}, COSFloat{-250.0}, COSString{*}, COSFloat{-250.0}, COSString{?}, COSFloat{-250.0}, COSString{:}, COSFloat{-250.0}, COSString{\}]}
-[2011-03-11 15:00:38,789]DEBUG 11507[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,789]DEBUG 11507[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,790]DEBUG 11508[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,790]DEBUG 11508[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,790]DEBUG 11508[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,790]DEBUG 11508[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,791]DEBUG 11509[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{469.276}
-[2011-03-11 15:00:38,791]DEBUG 11509[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,791]DEBUG 11509[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{To}, COSFloat{-250.0}, COSString{escape}, COSFloat{-250.0}, COSString{these}, COSFloat{-250.0}, COSString{character}, COSFloat{-250.0}, COSString{use}, COSFloat{-250.0}, COSString{the}, COSFloat{-250.0}, COSString{\}, COSFloat{-250.0}, COSString{before}, COSFloat{-250.0}, COSString{the}, COSFloat{-250.0}, COSString{character.}, COSFloat{-250.0}, COSString{For}, COSFloat{-250.0}, COSString{example}, COSFloat{-250.0}, COSString{to}, COSFloat{-250.0}, COSString{search}, COSFloat{-250.0}, COSString{for}, COSFloat{-250.0}, COSString{(1+1):2}]}
-[2011-03-11 15:00:38,791]DEBUG 11509[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,792]DEBUG 11510[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,792]DEBUG 11510[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,792]DEBUG 11510[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,792]DEBUG 11510[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,793]DEBUG 11511[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,793]DEBUG 11511[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{456.076}
-[2011-03-11 15:00:38,793]DEBUG 11511[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,793]DEBUG 11511[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{use}, COSFloat{-250.0}, COSString{the}, COSFloat{-250.0}, COSString{query:}]}
-[2011-03-11 15:00:38,793]DEBUG 11511[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,794]DEBUG 11512[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{ET}
-[2011-03-11 15:00:38,794]DEBUG 11512[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{q}
-[2011-03-11 15:00:38,794]DEBUG 11512[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.64705}
-[2011-03-11 15:00:38,795]DEBUG 11513[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.71372}
-[2011-03-11 15:00:38,795]DEBUG 11513[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.77647}
-[2011-03-11 15:00:38,795]DEBUG 11513[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{rg}
-[2011-03-11 15:00:38,795]DEBUG 11513[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.64705}
-[2011-03-11 15:00:38,795]DEBUG 11513[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.71372}
-[2011-03-11 15:00:38,796]DEBUG 11514[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.77647}
-[2011-03-11 15:00:38,796]DEBUG 11514[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{RG}
-[2011-03-11 15:00:38,796]DEBUG 11514[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,797]DEBUG 11515[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{448.272}
-[2011-03-11 15:00:38,797]DEBUG 11515[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.0}
-[2011-03-11 15:00:38,797]DEBUG 11515[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{-9.86}
-[2011-03-11 15:00:38,797]DEBUG 11515[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{re}
-[2011-03-11 15:00:38,797]DEBUG 11515[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{b}
-[2011-03-11 15:00:38,798]DEBUG 11516[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Q}
-[2011-03-11 15:00:38,798]DEBUG 11516[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{BT}
-[2011-03-11 15:00:38,798]DEBUG 11516[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSName{F9}
-[2011-03-11 15:00:38,798]DEBUG 11516[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{10.0}
-[2011-03-11 15:00:38,799]DEBUG 11517[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tf}
-[2011-03-11 15:00:38,799]DEBUG 11517[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,799]DEBUG 11517[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,799]DEBUG 11517[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,799]DEBUG 11517[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,800]DEBUG 11518[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,800]DEBUG 11518[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{440.982}
-[2011-03-11 15:00:38,800]DEBUG 11518[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,800]DEBUG 11518[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{\(1\+1\)\:2}]}
-[2011-03-11 15:00:38,800]DEBUG 11518[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,801]DEBUG 11519[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSName{F2}
-[2011-03-11 15:00:38,801]DEBUG 11519[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{8.4}
-[2011-03-11 15:00:38,801]DEBUG 11519[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tf}
-[2011-03-11 15:00:38,801]DEBUG 11519[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,802]DEBUG 11520[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,802]DEBUG 11520[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,802]DEBUG 11520[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,802]DEBUG 11520[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,802]DEBUG 11520[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{713.129}
-[2011-03-11 15:00:38,803]DEBUG 11521[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,803]DEBUG 11521[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{Apache}, COSFloat{-277.9762}, COSString{Lucene}, COSFloat{-277.9762}, COSString{-}, COSFloat{-277.9762}, COSString{Query}, COSFloat{-277.9762}, COSString{Parser}, COSFloat{-277.9762}, COSString{Syntax}]}
-[2011-03-11 15:00:38,803]DEBUG 11521[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,803]DEBUG 11521[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{ET}
-[2011-03-11 15:00:38,804]DEBUG 11522[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{q}
-[2011-03-11 15:00:38,804]DEBUG 11522[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,804]DEBUG 11522[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{g}
-[2011-03-11 15:00:38,804]DEBUG 11522[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,805]DEBUG 11523[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{107.75}
-[2011-03-11 15:00:38,805]DEBUG 11523[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.0}
-[2011-03-11 15:00:38,805]DEBUG 11523[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.25}
-[2011-03-11 15:00:38,805]DEBUG 11523[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{re}
-[2011-03-11 15:00:38,805]DEBUG 11523[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{f}
-[2011-03-11 15:00:38,806]DEBUG 11524[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Q}
-[2011-03-11 15:00:38,806]DEBUG 11524[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{BT}
-[2011-03-11 15:00:38,806]DEBUG 11524[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSName{F1}
-[2011-03-11 15:00:38,806]DEBUG 11524[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{8.4}
-[2011-03-11 15:00:38,806]DEBUG 11524[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tf}
-[2011-03-11 15:00:38,807]DEBUG 11525[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,807]DEBUG 11525[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,807]DEBUG 11525[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,807]DEBUG 11525[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,807]DEBUG 11525[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{90.0}
-[2011-03-11 15:00:38,808]DEBUG 11526[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{94.879}
-[2011-03-11 15:00:38,808]DEBUG 11526[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,808]DEBUG 11526[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{Page}, COSFloat{-277.9762}, COSString{7}]}
-[2011-03-11 15:00:38,808]DEBUG 11526[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,809]DEBUG 11527[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSName{F2}
-[2011-03-11 15:00:38,809]DEBUG 11527[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{10.0}
-[2011-03-11 15:00:38,809]DEBUG 11527[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tf}
-[2011-03-11 15:00:38,809]DEBUG 11527[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.82745}
-[2011-03-11 15:00:38,809]DEBUG 11527[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{g}
-[2011-03-11 15:00:38,810]DEBUG 11528[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,810]DEBUG 11528[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,810]DEBUG 11528[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{0}
-[2011-03-11 15:00:38,810]DEBUG 11528[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSInt{1}
-[2011-03-11 15:00:38,811]DEBUG 11529[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{155.965}
-[2011-03-11 15:00:38,811]DEBUG 11529[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{84.121}
-[2011-03-11 15:00:38,811]DEBUG 11529[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{Tm}
-[2011-03-11 15:00:38,811]DEBUG 11529[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSArray{[COSString{Copyright}, COSFloat{-278.0}, COSString{©}, COSFloat{-278.0}, COSString{2006}, COSFloat{-278.0}, COSString{The}, COSFloat{-278.0}, COSString{Apache}, COSFloat{-278.0}, COSString{Software}, COSFloat{-278.0}, COSString{Foundation.}, COSFloat{-278.0}, COSString{All}, COSFloat{-278.0}, COSString{rights}, COSFloat{-278.0}, COSString{reserved.}]}
-[2011-03-11 15:00:38,811]DEBUG 11529[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{TJ}
-[2011-03-11 15:00:38,812]DEBUG 11530[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{ET}
+[2011-03-15 16:57:33,074]DEBUG709611[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.363}
+[2011-03-15 16:57:33,075]DEBUG709612[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{439.3406}
+[2011-03-15 16:57:33,075]DEBUG709612[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.0928}
+[2011-03-15 16:57:33,075]DEBUG709612[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,075]DEBUG709612[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{439.0656}
+[2011-03-15 16:57:33,076]DEBUG709613[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.823}
+[2011-03-15 16:57:33,076]DEBUG709613[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{438.914}
+[2011-03-15 16:57:33,076]DEBUG709613[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.4613}
+[2011-03-15 16:57:33,076]DEBUG709613[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{438.8839}
+[2011-03-15 16:57:33,077]DEBUG709614[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.0094}
+[2011-03-15 16:57:33,077]DEBUG709614[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,077]DEBUG709614[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{f}
+[2011-03-15 16:57:33,077]DEBUG709614[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.0}
+[2011-03-15 16:57:33,077]DEBUG709614[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.0}
+[2011-03-15 16:57:33,078]DEBUG709615[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{0.0}
+[2011-03-15 16:57:33,078]DEBUG709615[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{1.0}
+[2011-03-15 16:57:33,078]DEBUG709615[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{k}
+[2011-03-15 16:57:33,078]DEBUG709615[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.1656}
+[2011-03-15 16:57:33,079]DEBUG709616[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.558}
+[2011-03-15 16:57:33,079]DEBUG709616[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{m}
+[2011-03-15 16:57:33,079]DEBUG709616[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.8388}
+[2011-03-15 16:57:33,079]DEBUG709616[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.2814}
+[2011-03-15 16:57:33,080]DEBUG709617[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.5256}
+[2011-03-15 16:57:33,080]DEBUG709617[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.0863}
+[2011-03-15 16:57:33,080]DEBUG709617[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.2257}
+[2011-03-15 16:57:33,080]DEBUG709617[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.9712}
+[2011-03-15 16:57:33,081]DEBUG709618[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,081]DEBUG709618[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.9238}
+[2011-03-15 16:57:33,081]DEBUG709618[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.8579}
+[2011-03-15 16:57:33,081]DEBUG709618[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.6006}
+[2011-03-15 16:57:33,082]DEBUG709619[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.8012}
+[2011-03-15 16:57:33,082]DEBUG709619[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.2557}
+[2011-03-15 16:57:33,082]DEBUG709619[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.8012}
+[2011-03-15 16:57:33,082]DEBUG709619[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,082]DEBUG709619[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.6856}
+[2011-03-15 16:57:33,082]DEBUG709619[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.8012}
+[2011-03-15 16:57:33,083]DEBUG709620[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.2491}
+[2011-03-15 16:57:33,083]DEBUG709620[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.9395}
+[2011-03-15 16:57:33,083]DEBUG709620[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.9424}
+[2011-03-15 16:57:33,083]DEBUG709620[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.2179}
+[2011-03-15 16:57:33,083]DEBUG709620[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,084]DEBUG709621[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.6374}
+[2011-03-15 16:57:33,084]DEBUG709621[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.4962}
+[2011-03-15 16:57:33,084]DEBUG709621[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.484}
+[2011-03-15 16:57:33,084]DEBUG709621[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.8528}
+[2011-03-15 16:57:33,084]DEBUG709621[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.484}
+[2011-03-15 16:57:33,085]DEBUG709622[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.2845}
+[2011-03-15 16:57:33,085]DEBUG709622[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,085]DEBUG709622[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.484}
+[2011-03-15 16:57:33,085]DEBUG709622[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.5397}
+[2011-03-15 16:57:33,086]DEBUG709623[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.5407}
+[2011-03-15 16:57:33,086]DEBUG709623[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.7712}
+[2011-03-15 16:57:33,086]DEBUG709623[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.6572}
+[2011-03-15 16:57:33,086]DEBUG709623[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.9813}
+[2011-03-15 16:57:33,086]DEBUG709623[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,087]DEBUG709624[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.7723}
+[2011-03-15 16:57:33,087]DEBUG709624[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.1913}
+[2011-03-15 16:57:33,087]DEBUG709624[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.9239}
+[2011-03-15 16:57:33,087]DEBUG709624[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.3594}
+[2011-03-15 16:57:33,087]DEBUG709624[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.1107}
+[2011-03-15 16:57:33,088]DEBUG709625[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.4861}
+[2011-03-15 16:57:33,088]DEBUG709625[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,088]DEBUG709625[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.299}
+[2011-03-15 16:57:33,088]DEBUG709625[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.6129}
+[2011-03-15 16:57:33,089]DEBUG709626[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.509}
+[2011-03-15 16:57:33,089]DEBUG709626[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.7095}
+[2011-03-15 16:57:33,089]DEBUG709626[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.744}
+[2011-03-15 16:57:33,089]DEBUG709626[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.7744}
+[2011-03-15 16:57:33,089]DEBUG709626[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,090]DEBUG709627[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.9155}
+[2011-03-15 16:57:33,090]DEBUG709627[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.8195}
+[2011-03-15 16:57:33,090]DEBUG709627[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.1757}
+[2011-03-15 16:57:33,091]DEBUG709628[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.8646}
+[2011-03-15 16:57:33,091]DEBUG709628[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.5238}
+[2011-03-15 16:57:33,091]DEBUG709628[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.9062}
+[2011-03-15 16:57:33,091]DEBUG709628[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,092]DEBUG709629[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.2339}
+[2011-03-15 16:57:33,092]DEBUG709629[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.9913}
+[2011-03-15 16:57:33,092]DEBUG709629[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.7572}
+[2011-03-15 16:57:33,092]DEBUG709629[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.0913}
+[2011-03-15 16:57:33,092]DEBUG709629[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0922}
+[2011-03-15 16:57:33,093]DEBUG709630[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.2095}
+[2011-03-15 16:57:33,093]DEBUG709630[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,093]DEBUG709630[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0956}
+[2011-03-15 16:57:33,093]DEBUG709630[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.3294}
+[2011-03-15 16:57:33,094]DEBUG709631[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0973}
+[2011-03-15 16:57:33,094]DEBUG709631[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.4063}
+[2011-03-15 16:57:33,094]DEBUG709631[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0973}
+[2011-03-15 16:57:33,094]DEBUG709631[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.438}
+[2011-03-15 16:57:33,094]DEBUG709631[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,095]DEBUG709632[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0973}
+[2011-03-15 16:57:33,095]DEBUG709632[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.7963}
+[2011-03-15 16:57:33,095]DEBUG709632[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.014}
+[2011-03-15 16:57:33,095]DEBUG709632[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.0494}
+[2011-03-15 16:57:33,095]DEBUG709632[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.8473}
+[2011-03-15 16:57:33,096]DEBUG709633[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.1946}
+[2011-03-15 16:57:33,096]DEBUG709633[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,096]DEBUG709633[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.6239}
+[2011-03-15 16:57:33,096]DEBUG709633[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.3944}
+[2011-03-15 16:57:33,097]DEBUG709634[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.2889}
+[2011-03-15 16:57:33,097]DEBUG709634[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.4928}
+[2011-03-15 16:57:33,097]DEBUG709634[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.8472}
+[2011-03-15 16:57:33,097]DEBUG709634[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.4928}
+[2011-03-15 16:57:33,097]DEBUG709634[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,098]DEBUG709635[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.434}
+[2011-03-15 16:57:33,098]DEBUG709635[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.4928}
+[2011-03-15 16:57:33,098]DEBUG709635[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.1289}
+[2011-03-15 16:57:33,098]DEBUG709635[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.4211}
+[2011-03-15 16:57:33,098]DEBUG709635[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.9305}
+[2011-03-15 16:57:33,099]DEBUG709636[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.2762}
+[2011-03-15 16:57:33,099]DEBUG709636[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,099]DEBUG709636[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.7338}
+[2011-03-15 16:57:33,100]DEBUG709637[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.1311}
+[2011-03-15 16:57:33,100]DEBUG709637[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.5889}
+[2011-03-15 16:57:33,100]DEBUG709637[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.8746}
+[2011-03-15 16:57:33,100]DEBUG709637[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.494}
+[2011-03-15 16:57:33,100]DEBUG709637[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.5063}
+[2011-03-15 16:57:33,101]DEBUG709638[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,101]DEBUG709638[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.6357}
+[2011-03-15 16:57:33,101]DEBUG709638[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.6245}
+[2011-03-15 16:57:33,101]DEBUG709638[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,101]DEBUG709638[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.7139}
+[2011-03-15 16:57:33,102]DEBUG709639[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.9911}
+[2011-03-15 16:57:33,102]DEBUG709639[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{443.8423}
+[2011-03-15 16:57:33,102]DEBUG709639[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.2895}
+[2011-03-15 16:57:33,102]DEBUG709639[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.0206}
+[2011-03-15 16:57:33,103]DEBUG709640[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.5146}
+[2011-03-15 16:57:33,103]DEBUG709640[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,103]DEBUG709640[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.1989}
+[2011-03-15 16:57:33,103]DEBUG709640[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.7411}
+[2011-03-15 16:57:33,103]DEBUG709640[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.4588}
+[2011-03-15 16:57:33,104]DEBUG709641[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.9163}
+[2011-03-15 16:57:33,104]DEBUG709641[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.7973}
+[2011-03-15 16:57:33,104]DEBUG709641[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.0379}
+[2011-03-15 16:57:33,104]DEBUG709641[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,105]DEBUG709642[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.1355}
+[2011-03-15 16:57:33,105]DEBUG709642[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1595}
+[2011-03-15 16:57:33,105]DEBUG709642[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.5272}
+[2011-03-15 16:57:33,105]DEBUG709642[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.2213}
+[2011-03-15 16:57:33,105]DEBUG709642[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.974}
+[2011-03-15 16:57:33,106]DEBUG709643[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.2213}
+[2011-03-15 16:57:33,106]DEBUG709643[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,106]DEBUG709643[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.4173}
+[2011-03-15 16:57:33,106]DEBUG709643[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.2213}
+[2011-03-15 16:57:33,106]DEBUG709643[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.7756}
+[2011-03-15 16:57:33,106]DEBUG709643[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1677}
+[2011-03-15 16:57:33,107]DEBUG709644[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0523}
+[2011-03-15 16:57:33,107]DEBUG709644[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.0645}
+[2011-03-15 16:57:33,107]DEBUG709644[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,107]DEBUG709644[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.3289}
+[2011-03-15 16:57:33,107]DEBUG709644[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.9594}
+[2011-03-15 16:57:33,108]DEBUG709645[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.5322}
+[2011-03-15 16:57:33,108]DEBUG709645[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.8295}
+[2011-03-15 16:57:33,108]DEBUG709645[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.664}
+[2011-03-15 16:57:33,108]DEBUG709645[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.6711}
+[2011-03-15 16:57:33,109]DEBUG709646[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,109]DEBUG709646[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.7938}
+[2011-03-15 16:57:33,109]DEBUG709646[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.5129}
+[2011-03-15 16:57:33,109]DEBUG709646[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.8839}
+[2011-03-15 16:57:33,110]DEBUG709647[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.3145}
+[2011-03-15 16:57:33,110]DEBUG709647[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.9372}
+[2011-03-15 16:57:33,110]DEBUG709647[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.073}
+[2011-03-15 16:57:33,110]DEBUG709647[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,111]DEBUG709648[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.9656}
+[2011-03-15 16:57:33,111]DEBUG709648[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.9227}
+[2011-03-15 16:57:33,111]DEBUG709648[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.9806}
+[2011-03-15 16:57:33,111]DEBUG709648[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.6529}
+[2011-03-15 16:57:33,111]DEBUG709648[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.9806}
+[2011-03-15 16:57:33,112]DEBUG709649[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.2628}
+[2011-03-15 16:57:33,112]DEBUG709649[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,112]DEBUG709649[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.9806}
+[2011-03-15 16:57:33,112]DEBUG709649[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.0913}
+[2011-03-15 16:57:33,113]DEBUG709650[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,113]DEBUG709650[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.9806}
+[2011-03-15 16:57:33,113]DEBUG709650[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.2729}
+[2011-03-15 16:57:33,113]DEBUG709650[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.9987}
+[2011-03-15 16:57:33,113]DEBUG709650[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.7562}
+[2011-03-15 16:57:33,114]DEBUG709651[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{448.0373}
+[2011-03-15 16:57:33,114]DEBUG709651[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.5413}
+[2011-03-15 16:57:33,114]DEBUG709651[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,114]DEBUG709651[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{448.0739}
+[2011-03-15 16:57:33,115]DEBUG709652[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.3247}
+[2011-03-15 16:57:33,115]DEBUG709652[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{448.149}
+[2011-03-15 16:57:33,115]DEBUG709652[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.1164}
+[2011-03-15 16:57:33,115]DEBUG709652[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{448.259}
+[2011-03-15 16:57:33,115]DEBUG709652[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,116]DEBUG709653[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,116]DEBUG709653[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.3405}
+[2011-03-15 16:57:33,116]DEBUG709653[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,116]DEBUG709653[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,116]DEBUG709653[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.2507}
+[2011-03-15 16:57:33,117]DEBUG709654[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.0997}
+[2011-03-15 16:57:33,117]DEBUG709654[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.1906}
+[2011-03-15 16:57:33,117]DEBUG709654[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.3128}
+[2011-03-15 16:57:33,117]DEBUG709654[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.1656}
+[2011-03-15 16:57:33,117]DEBUG709654[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.558}
+[2011-03-15 16:57:33,118]DEBUG709655[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,118]DEBUG709655[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,118]DEBUG709655[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0922}
+[2011-03-15 16:57:33,118]DEBUG709655[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.5213}
+[2011-03-15 16:57:33,118]DEBUG709655[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{m}
+[2011-03-15 16:57:33,119]DEBUG709656[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.7722}
+[2011-03-15 16:57:33,119]DEBUG709656[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.3895}
+[2011-03-15 16:57:33,119]DEBUG709656[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.294}
+[2011-03-15 16:57:33,119]DEBUG709656[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.2795}
+[2011-03-15 16:57:33,119]DEBUG709656[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.6573}
+[2011-03-15 16:57:33,120]DEBUG709657[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.1879}
+[2011-03-15 16:57:33,120]DEBUG709657[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,120]DEBUG709657[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.2956}
+[2011-03-15 16:57:33,120]DEBUG709657[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.1363}
+[2011-03-15 16:57:33,120]DEBUG709657[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.0388}
+[2011-03-15 16:57:33,120]DEBUG709657[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.078}
+[2011-03-15 16:57:33,121]DEBUG709658[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.8906}
+[2011-03-15 16:57:33,121]DEBUG709658[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.013}
+[2011-03-15 16:57:33,121]DEBUG709658[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,121]DEBUG709658[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.7406}
+[2011-03-15 16:57:33,121]DEBUG709658[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.9478}
+[2011-03-15 16:57:33,122]DEBUG709659[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.6238}
+[2011-03-15 16:57:33,122]DEBUG709659[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.8529}
+[2011-03-15 16:57:33,122]DEBUG709659[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.5439}
+[2011-03-15 16:57:33,122]DEBUG709659[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.7262}
+[2011-03-15 16:57:33,122]DEBUG709659[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,123]DEBUG709660[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.4622}
+[2011-03-15 16:57:33,123]DEBUG709660[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.6012}
+[2011-03-15 16:57:33,123]DEBUG709660[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.4206}
+[2011-03-15 16:57:33,123]DEBUG709660[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.4628}
+[2011-03-15 16:57:33,123]DEBUG709660[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.4206}
+[2011-03-15 16:57:33,124]DEBUG709661[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.3095}
+[2011-03-15 16:57:33,124]DEBUG709661[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,124]DEBUG709661[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.4206}
+[2011-03-15 16:57:33,124]DEBUG709661[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.0745}
+[2011-03-15 16:57:33,124]DEBUG709661[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.5107}
+[2011-03-15 16:57:33,124]DEBUG709661[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.8795}
+[2011-03-15 16:57:33,125]DEBUG709662[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.6873}
+[2011-03-15 16:57:33,125]DEBUG709662[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.723}
+[2011-03-15 16:57:33,125]DEBUG709662[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,125]DEBUG709662[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{444.8639}
+[2011-03-15 16:57:33,125]DEBUG709662[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.5679}
+[2011-03-15 16:57:33,126]DEBUG709663[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.1238}
+[2011-03-15 16:57:33,126]DEBUG709663[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.4897}
+[2011-03-15 16:57:33,126]DEBUG709663[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.4657}
+[2011-03-15 16:57:33,126]DEBUG709663[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.4897}
+[2011-03-15 16:57:33,126]DEBUG709663[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,127]DEBUG709664[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{445.8039}
+[2011-03-15 16:57:33,127]DEBUG709664[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.4897}
+[2011-03-15 16:57:33,127]DEBUG709664[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.1055}
+[2011-03-15 16:57:33,127]DEBUG709664[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.5628}
+[2011-03-15 16:57:33,127]DEBUG709664[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.3688}
+[2011-03-15 16:57:33,128]DEBUG709665[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.7114}
+[2011-03-15 16:57:33,128]DEBUG709665[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,128]DEBUG709665[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.6322}
+[2011-03-15 16:57:33,128]DEBUG709665[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.8596}
+[2011-03-15 16:57:33,128]DEBUG709665[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.8272}
+[2011-03-15 16:57:33,129]DEBUG709666[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.0629}
+[2011-03-15 16:57:33,129]DEBUG709666[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{446.9505}
+[2011-03-15 16:57:33,129]DEBUG709666[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.3197}
+[2011-03-15 16:57:33,129]DEBUG709666[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,129]DEBUG709666[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0454}
+[2011-03-15 16:57:33,129]DEBUG709666[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.5178}
+[2011-03-15 16:57:33,130]DEBUG709667[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0922}
+[2011-03-15 16:57:33,130]DEBUG709667[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.8112}
+[2011-03-15 16:57:33,130]DEBUG709667[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{447.0922}
+[2011-03-15 16:57:33,130]DEBUG709667[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.1979}
+[2011-03-15 16:57:33,130]DEBUG709667[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,131]DEBUG709668[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,131]DEBUG709668[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,131]DEBUG709668[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{449.3339}
+[2011-03-15 16:57:33,131]DEBUG709668[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,131]DEBUG709668[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{m}
+[2011-03-15 16:57:33,131]DEBUG709668[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{449.3339}
+[2011-03-15 16:57:33,132]DEBUG709669[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,132]DEBUG709669[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,132]DEBUG709669[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.1239}
+[2011-03-15 16:57:33,132]DEBUG709669[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,132]DEBUG709669[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,133]DEBUG709670[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.1239}
+[2011-03-15 16:57:33,133]DEBUG709670[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.3179}
+[2011-03-15 16:57:33,133]DEBUG709670[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,133]DEBUG709670[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.3254}
+[2011-03-15 16:57:33,133]DEBUG709670[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.6844}
+[2011-03-15 16:57:33,133]DEBUG709670[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.5122}
+[2011-03-15 16:57:33,134]DEBUG709671[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.9279}
+[2011-03-15 16:57:33,134]DEBUG709671[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.6837}
+[2011-03-15 16:57:33,134]DEBUG709671[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.0444}
+[2011-03-15 16:57:33,134]DEBUG709671[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,134]DEBUG709671[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.8538}
+[2011-03-15 16:57:33,135]DEBUG709672[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1612}
+[2011-03-15 16:57:33,135]DEBUG709672[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{451.042}
+[2011-03-15 16:57:33,135]DEBUG709672[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.2213}
+[2011-03-15 16:57:33,135]DEBUG709672[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{451.2472}
+[2011-03-15 16:57:33,136]DEBUG709673[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.2213}
+[2011-03-15 16:57:33,136]DEBUG709673[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,136]DEBUG709673[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{451.5437}
+[2011-03-15 16:57:33,136]DEBUG709673[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.2213}
+[2011-03-15 16:57:33,137]DEBUG709674[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{451.8439}
+[2011-03-15 16:57:33,137]DEBUG709674[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.126}
+[2011-03-15 16:57:33,137]DEBUG709674[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{452.1504}
+[2011-03-15 16:57:33,137]DEBUG709674[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.9378}
+[2011-03-15 16:57:33,138]DEBUG709675[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,138]DEBUG709675[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{451.8471}
+[2011-03-15 16:57:33,138]DEBUG709675[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.1212}
+[2011-03-15 16:57:33,138]DEBUG709675[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,138]DEBUG709675[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{451.6339}
+[2011-03-15 16:57:33,139]DEBUG709676[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.2496}
+[2011-03-15 16:57:33,139]DEBUG709676[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{451.4187}
+[2011-03-15 16:57:33,139]DEBUG709676[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.3128}
+[2011-03-15 16:57:33,139]DEBUG709676[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{451.2039}
+[2011-03-15 16:57:33,140]DEBUG709677[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.3128}
+[2011-03-15 16:57:33,140]DEBUG709677[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,140]DEBUG709677[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{451.0106}
+[2011-03-15 16:57:33,140]DEBUG709677[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.3128}
+[2011-03-15 16:57:33,141]DEBUG709678[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.8388}
+[2011-03-15 16:57:33,141]DEBUG709678[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.2544}
+[2011-03-15 16:57:33,141]DEBUG709678[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.6854}
+[2011-03-15 16:57:33,141]DEBUG709678[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.1396}
+[2011-03-15 16:57:33,141]DEBUG709678[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,142]DEBUG709679[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.5321}
+[2011-03-15 16:57:33,142]DEBUG709679[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.0228}
+[2011-03-15 16:57:33,142]DEBUG709679[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.4238}
+[2011-03-15 16:57:33,142]DEBUG709679[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.8629}
+[2011-03-15 16:57:33,143]DEBUG709680[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.3589}
+[2011-03-15 16:57:33,143]DEBUG709680[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.658}
+[2011-03-15 16:57:33,143]DEBUG709680[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,143]DEBUG709680[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.2605}
+[2011-03-15 16:57:33,143]DEBUG709680[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.3462}
+[2011-03-15 16:57:33,144]DEBUG709681[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.2123}
+[2011-03-15 16:57:33,144]DEBUG709681[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.0046}
+[2011-03-15 16:57:33,144]DEBUG709681[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.2123}
+[2011-03-15 16:57:33,144]DEBUG709681[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.633}
+[2011-03-15 16:57:33,145]DEBUG709682[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,145]DEBUG709682[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{450.2123}
+[2011-03-15 16:57:33,145]DEBUG709682[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,145]DEBUG709682[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,145]DEBUG709682[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,146]DEBUG709683[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,146]DEBUG709683[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{457.9217}
+[2011-03-15 16:57:33,146]DEBUG709683[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,146]DEBUG709683[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{m}
+[2011-03-15 16:57:33,147]DEBUG709684[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{456.3351}
+[2011-03-15 16:57:33,147]DEBUG709684[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,147]DEBUG709684[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,147]DEBUG709684[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{457.2434}
+[2011-03-15 16:57:33,148]DEBUG709685[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,148]DEBUG709685[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,148]DEBUG709685[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{458.0685}
+[2011-03-15 16:57:33,148]DEBUG709685[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.1097}
+[2011-03-15 16:57:33,148]DEBUG709685[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,149]DEBUG709686[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{458.375}
+[2011-03-15 16:57:33,149]DEBUG709686[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{556.9963}
+[2011-03-15 16:57:33,149]DEBUG709686[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,149]DEBUG709686[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{458.3883}
+[2011-03-15 16:57:33,149]DEBUG709686[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.0529}
+[2011-03-15 16:57:33,150]DEBUG709687[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{458.4784}
+[2011-03-15 16:57:33,150]DEBUG709687[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.4095}
+[2011-03-15 16:57:33,150]DEBUG709687[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{458.6434}
+[2011-03-15 16:57:33,150]DEBUG709687[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.0663}
+[2011-03-15 16:57:33,151]DEBUG709688[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{c}
+[2011-03-15 16:57:33,151]DEBUG709688[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{459.4683}
+[2011-03-15 16:57:33,151]DEBUG709688[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,151]DEBUG709688[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,151]DEBUG709688[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{460.3717}
+[2011-03-15 16:57:33,152]DEBUG709689[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,152]DEBUG709689[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,152]DEBUG709689[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{461.1484}
+[2011-03-15 16:57:33,152]DEBUG709689[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.0964}
+[2011-03-15 16:57:33,152]DEBUG709689[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,153]DEBUG709690[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{461.4083}
+[2011-03-15 16:57:33,153]DEBUG709690[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{557.1045}
+[2011-03-15 16:57:33,153]DEBUG709690[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,153]DEBUG709690[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{461.7051}
+[2011-03-15 16:57:33,153]DEBUG709690[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{558.1063}
+[2011-03-15 16:57:33,154]DEBUG709691[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,154]DEBUG709691[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{462.5932}
+[2011-03-15 16:57:33,154]DEBUG709691[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,154]DEBUG709691[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,155]DEBUG709692[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{463.4484}
+[2011-03-15 16:57:33,155]DEBUG709692[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,155]DEBUG709692[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,155]DEBUG709692[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{461.8267}
+[2011-03-15 16:57:33,156]DEBUG709693[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,156]DEBUG709693[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,156]DEBUG709693[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{460.9151}
+[2011-03-15 16:57:33,156]DEBUG709693[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,157]DEBUG709694[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,157]DEBUG709694[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{460.0899}
+[2011-03-15 16:57:33,157]DEBUG709694[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.023}
+[2011-03-15 16:57:33,157]DEBUG709694[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,158]DEBUG709695[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{459.8884}
+[2011-03-15 16:57:33,158]DEBUG709695[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{559.908}
+[2011-03-15 16:57:33,158]DEBUG709695[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,158]DEBUG709695[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{458.8401}
+[2011-03-15 16:57:33,158]DEBUG709695[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,159]DEBUG709696[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,163]DEBUG709700[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,163]DEBUG709700[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,163]DEBUG709700[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{464.19}
+[2011-03-15 16:57:33,164]DEBUG709701[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{562.0646}
+[2011-03-15 16:57:33,164]DEBUG709701[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{m}
+[2011-03-15 16:57:33,164]DEBUG709701[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{464.19}
+[2011-03-15 16:57:33,165]DEBUG709702[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{563.076}
+[2011-03-15 16:57:33,165]DEBUG709702[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,165]DEBUG709702[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{465.0698}
+[2011-03-15 16:57:33,165]DEBUG709702[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{563.076}
+[2011-03-15 16:57:33,166]DEBUG709703[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,166]DEBUG709703[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{465.0698}
+[2011-03-15 16:57:33,166]DEBUG709703[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{562.0646}
+[2011-03-15 16:57:33,166]DEBUG709703[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,166]DEBUG709703[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,167]DEBUG709704[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,167]DEBUG709704[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{464.19}
+[2011-03-15 16:57:33,167]DEBUG709704[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,167]DEBUG709704[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{m}
+[2011-03-15 16:57:33,167]DEBUG709704[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{464.19}
+[2011-03-15 16:57:33,168]DEBUG709705[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,168]DEBUG709705[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,168]DEBUG709705[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{465.0698}
+[2011-03-15 16:57:33,168]DEBUG709705[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,169]DEBUG709706[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,169]DEBUG709706[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{465.0698}
+[2011-03-15 16:57:33,169]DEBUG709706[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,169]DEBUG709706[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,169]DEBUG709706[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,170]DEBUG709707[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,170]DEBUG709707[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{466.3882}
+[2011-03-15 16:57:33,170]DEBUG709707[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,170]DEBUG709707[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{m}
+[2011-03-15 16:57:33,171]DEBUG709708[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{466.3882}
+[2011-03-15 16:57:33,171]DEBUG709708[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{563.076}
+[2011-03-15 16:57:33,171]DEBUG709708[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,171]DEBUG709708[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{467.2664}
+[2011-03-15 16:57:33,171]DEBUG709708[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{563.076}
+[2011-03-15 16:57:33,172]DEBUG709709[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,172]DEBUG709709[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{467.2664}
+[2011-03-15 16:57:33,172]DEBUG709709[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,172]DEBUG709709[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,173]DEBUG709710[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,173]DEBUG709710[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,173]DEBUG709710[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{468.6097}
+[2011-03-15 16:57:33,173]DEBUG709710[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,174]DEBUG709711[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{m}
+[2011-03-15 16:57:33,174]DEBUG709711[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{468.6097}
+[2011-03-15 16:57:33,174]DEBUG709711[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{563.076}
+[2011-03-15 16:57:33,175]DEBUG709712[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,175]DEBUG709712[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{469.4879}
+[2011-03-15 16:57:33,175]DEBUG709712[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{563.076}
+[2011-03-15 16:57:33,175]DEBUG709712[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,175]DEBUG709712[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{469.4879}
+[2011-03-15 16:57:33,176]DEBUG709713[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{555.918}
+[2011-03-15 16:57:33,176]DEBUG709713[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,176]DEBUG709713[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,176]DEBUG709713[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{h}
+[2011-03-15 16:57:33,177]DEBUG709714[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{475.1425}
+[2011-03-15 16:57:33,177]DEBUG709714[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{553.9314}
+[2011-03-15 16:57:33,177]DEBUG709714[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{m}
+[2011-03-15 16:57:33,177]DEBUG709714[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{475.1425}
+[2011-03-15 16:57:33,177]DEBUG709714[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,178]DEBUG709715[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,188]DEBUG709725[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{475.9424}
+[2011-03-15 16:57:33,189]DEBUG709726[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{561.1028}
+[2011-03-15 16:57:33,189]DEBUG709726[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,189]DEBUG709726[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{475.9424}
+[2011-03-15 16:57:33,190]DEBUG709727[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{560.4296}
+[2011-03-15 16:57:33,190]DEBUG709727[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: PDFOperator{l}
+[2011-03-15 16:57:33,190]DEBUG709727[AWT-EventQueue-0] - org.apache.pdfbox.util.PDFStreamEngine.processSubStream(PDFStreamEngine.java:269) - processing substream token: COSFloat{476.1309}

@@ -29,6 +29,7 @@ public class ReadCustomizationFile {
             	Node nNode = (Node) nList.item(0);
             	Element eElement = (Element) nNode;
             	nList= eElement.getElementsByTagName("directory");
+            	criticalDirectory.clear();
         	    for(int i=0;i<nList.getLength();i++){
         	    	Node nValue = (Node) nList.item(i);
         	    	criticalDirectory.add(nValue.getTextContent());
@@ -37,6 +38,7 @@ public class ReadCustomizationFile {
             	nNode = (Node) nList.item(0);
             	eElement = (Element) nNode;
             	nList= eElement.getElementsByTagName("directory");
+            	notIndexDirectory.clear();
         	    for(int i=0;i<nList.getLength();i++){
         	    	Node nValue = (Node) nList.item(i);
         	    	notIndexDirectory.add(nValue.getTextContent());

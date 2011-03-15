@@ -2,7 +2,6 @@ package dse;
 
 import javax.swing.*;
 
-import java.awt.*;
 
 public class IndexGui extends javax.swing.JFrame {
     
@@ -79,7 +78,7 @@ public class IndexGui extends javax.swing.JFrame {
   
     private void browseButtonMouseClicked(java.awt.event.MouseEvent evt) {
     	int check = jFileChooser.showOpenDialog(this);
-		if(check == jFileChooser.APPROVE_OPTION) {
+		if(check == JFileChooser.APPROVE_OPTION) {
 			String file = jFileChooser.getSelectedFile().toString();
 			indexText.setText(file);
 		}
@@ -87,6 +86,7 @@ public class IndexGui extends javax.swing.JFrame {
 
     private void indexButtonMouseClicked(java.awt.event.MouseEvent evt) {
     	IndexFiles.indexer(indexText.getText());
+    	flag = true;
     }
 
     private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {
@@ -96,10 +96,11 @@ public class IndexGui extends javax.swing.JFrame {
     	System.exit(0);
     	
     }
+    public static boolean flag = false;
     private JFileChooser jFileChooser;
     private JButton browseButton;
     private JButton cancelButton;
     private JButton indexButton;
     private JTextField indexText;
-        
+    static final long serialVersionUID = 1;    
 }

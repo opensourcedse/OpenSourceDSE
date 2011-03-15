@@ -2,9 +2,6 @@
 package dse;
 
 import java.io.File;
-import java.util.HashSet;
-import java.util.Set;
-
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.IndexWriter;
@@ -23,7 +20,7 @@ public class InitializeWriter {
 	
 	public static void main(String[] args) {
 		try {
-		analyzer=new StandardAnalyzer(Version.LUCENE_CURRENT);
+		analyzer=new StandardAnalyzer(Version.LUCENE_30);
     	fsdDirIndex=FSDirectory.open(INDEX_DIR,new SimpleFSLockFactory());
     	if(INDEX_DIR.exists())
     		writer = new IndexWriter(fsdDirIndex, analyzer, false, new KeepOnlyLastCommitDeletionPolicy(),

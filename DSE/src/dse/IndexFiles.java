@@ -1,32 +1,25 @@
 package dse;
 
-import static java.nio.file.LinkOption.NOFOLLOW_LINKS;
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.KeepOnlyLastCommitDeletionPolicy;
 import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.store.*;
-import org.apache.lucene.util.Version;
 import java.io.*;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
 import org.apache.tika.metadata.*;
 import org.apache.tika.parser.*;
 import org.xml.sax.ContentHandler;
 import org.apache.tika.sax.*;
 import org.apache.lucene.document.*;
-import org.apache.tika.config.TikaConfig;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.BooleanClause;
-import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.TermQuery;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.LinkOption.*;
-import java.nio.file.attribute.*;
 import org.apache.commons.io.FileUtils;
 
 
@@ -96,13 +89,14 @@ public class IndexFiles {
 			  doc.add(new Field("contents", value,Field.Store.NO,Field.Index.ANALYZED,Field.TermVector.WITH_POSITIONS_OFFSETS));
 		  doc.add(new Field(name, value,Field.Store.YES, Field.Index.NOT_ANALYZED));
 	  }
+	  int i=0;
 	  if(f.getName().endsWith(".srt")) {
 		  String dirTemp = f.getCanonicalFile().toString();
 		  int position = dirTemp.lastIndexOf("/");
 		  File fileTemp = new File(dirTemp.substring(0,position));
 		  dirTemp = dirTemp.substring(position+1,dirTemp.lastIndexOf("."));
 		  String[] fileList = fileTemp.list();
-		  for(int i=0;i<fileList.length;i++) {
+		  for(i=0;i<fileList.length;i++) {
 			  int pos = fileList[i].lastIndexOf(".");
 			  String temp = fileList[i].substring(0,pos);
 			  if(temp.compareTo(dirTemp) ==0 ) {
@@ -111,6 +105,10 @@ public class IndexFiles {
 				  break;
 			  }
 		  }
+		  if(i == fileList.length){
+			  doc.add(new Field("path", f.getCanonicalPath(),Field.Store.YES,Field.Index.NOT_ANALYZED));
+		  }
+			  
 	  }
 	  else {
 		  doc.add(new Field("path", f.getCanonicalPath(),Field.Store.YES,Field.Index.NOT_ANALYZED));
@@ -121,13 +119,22 @@ public class IndexFiles {
 }
  
   public static void indexDocs(IndexWriter writer, File file)
-    throws IOException {
+  	throws IOException {
+	/*  Files.walkFileTree(start, new SimpleFileVisitor<Path>() {
+          @Override
+          public FileVisitResult preVisitDirectory(Path dir,BasicFileAttributes attrs) {
+              try {
+                  
+              } catch (IOException x) {
+                  throw new IOError(x);
+              }
+              return FileVisitResult.CONTINUE;            }
+      });*/
 	  int numTotalHits;
 	  TopScoreDocCollector collector = TopScoreDocCollector.create(1, false);
     if (file.canRead()) {
     	if(!ReadCustomizationFile.criticalDirectory.contains(file.getCanonicalPath())) {
     		if (file.isDirectory()) {
-    	    	  
     	    	  String[] files = file.list();
     	    	  if (files != null) {
     	    		  for (int i = 0; i < files.length; i++) {
@@ -163,7 +170,7 @@ public class IndexFiles {
     	          System.out.println(fnfe.getMessage());
     	         } 
     	    	  percentageIndex+=file.length();
-    	    	  if((percentageIndex/totalIndex) >= 0.01) {
+    	    	  if((percentageIndex/totalIndex) >= 0.05) {
     	    		  writer.optimize();
     	    		  writer.commit();
     	    		  percentageIndex=0;

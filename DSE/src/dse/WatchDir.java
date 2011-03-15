@@ -6,28 +6,18 @@ import static java.nio.file.LinkOption.*;
 import java.nio.file.attribute.*;
 import java.io.*;
 import java.util.*;
-
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.KeepOnlyLastCommitDeletionPolicy;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.Searcher;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopScoreDocCollector;
-import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.store.SimpleFSLockFactory;
-import org.apache.lucene.util.Version;
 
 public class WatchDir {
 
-    private static WatchService watcher;
+    public static WatchService watcher;
     public static Map<WatchKey,Path> keys;
     private static boolean trace = true;
 
@@ -115,10 +105,10 @@ public class WatchDir {
      * Creates a WatchService and registers the given directory
      */
     public WatchDir() throws IOException {
-        this.watcher = FileSystems.getDefault().newWatchService();
-        this.keys = new HashMap<WatchKey,Path>();
+    	watcher = FileSystems.getDefault().newWatchService();
+        keys = new HashMap<WatchKey,Path>();
         
-        Iterator it = ReadCustomizationFile.criticalDirectory.iterator();
+        Iterator<String> it = ReadCustomizationFile.criticalDirectory.iterator();
         while (it.hasNext()) {
         	Path dir =	Paths.get(it.next().toString());
         	if(Files.readAttributes(dir, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory())
@@ -127,7 +117,7 @@ public class WatchDir {
         		register(dir);
         }
         System.out.println("Done.");
-        this.trace = true;
+        trace = true;
     }
 
     public void processEvents() {

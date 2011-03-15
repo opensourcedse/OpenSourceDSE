@@ -1,7 +1,6 @@
 package dse;
 
 import static java.nio.file.LinkOption.NOFOLLOW_LINKS;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +11,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
-
 import javax.xml.parsers.*;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.*;
@@ -45,10 +43,10 @@ public class CustomizationUI extends javax.swing.JFrame {
         jFileChooser  = new JFileChooser();
         jLabelCritical = new JLabel();
         jScrollPane1 = new JScrollPane();
-        jListCritical = new JList(modelCritical);
+        jListCritical = new JList<String>(modelCritical);
         jButtonCritical = new JButton();
         jScrollPane2 = new JScrollPane();
-        jListNotIndex = new JList(modelNotIndex);
+        jListNotIndex = new JList<String>(modelNotIndex);
         jButtonNotIndex = new JButton();
         jLabelNotIndex = new JLabel();
         jLabelInterval = new JLabel();
@@ -203,7 +201,7 @@ public class CustomizationUI extends javax.swing.JFrame {
 	};
     private void jButtonCriticalMouseClicked(java.awt.event.MouseEvent evt) {
         int check = jFileChooser.showOpenDialog(this);
-		if(check == jFileChooser.APPROVE_OPTION) {
+		if(check == JFileChooser.APPROVE_OPTION) {
 			String file = jFileChooser.getSelectedFile().toString();
 			if(!modelNotIndex.contains(file))  {
 				if(!modelCritical.contains(file))
@@ -219,7 +217,7 @@ public class CustomizationUI extends javax.swing.JFrame {
     }
     private void jButtonNotIndexMouseClicked(java.awt.event.MouseEvent evt) {
         int check = jFileChooser.showOpenDialog(this);
-		if(check == jFileChooser.APPROVE_OPTION) {
+		if(check == JFileChooser.APPROVE_OPTION) {
 			String file = jFileChooser.getSelectedFile().toString();
 			if(!modelCritical.contains(file))  {
 				if(!modelNotIndex.contains(file))
@@ -257,13 +255,17 @@ public class CustomizationUI extends javax.swing.JFrame {
     private void updateDirectoryList() throws Exception{
     	Set<String> oldCriticalDirectory = new HashSet<String>();
     	Set<String> oldNotIndexDirectory = new HashSet<String>();
-    	oldCriticalDirectory = ReadCustomizationFile.criticalDirectory;
-    	oldNotIndexDirectory = ReadCustomizationFile.notIndexDirectory;
+    	Iterator<String> it = ReadCustomizationFile.criticalDirectory.iterator();
+    	while(it.hasNext()) 
+    		oldCriticalDirectory.add(it.next());
+    	it = ReadCustomizationFile.notIndexDirectory.iterator();
+    	while(it.hasNext()) 
+    		oldNotIndexDirectory.add(it.next());
     	ReadCustomizationFile.main(null);
     	synchronized(InitializeWriter.writer) {
-    		Iterator it = ReadCustomizationFile.notIndexDirectory.iterator();
+    		it = ReadCustomizationFile.notIndexDirectory.iterator();
             while (it.hasNext()) {
-            	Object temp = it.next();
+            	String temp = it.next();
             	if(!oldNotIndexDirectory.contains(temp)) {
             		updateIndex(temp.toString(),2);
             	}
@@ -271,53 +273,55 @@ public class CustomizationUI extends javax.swing.JFrame {
             }
             it = oldNotIndexDirectory.iterator();
             while (it.hasNext()) {
-            	Object temp = it.next();
-            	if(ReadCustomizationFile.notIndexDirectory.contains(temp)) {
+            	String temp = it.next();
+            	if(!ReadCustomizationFile.notIndexDirectory.contains(temp)) {
             		updateIndex(temp.toString(),1);
             	}
             	
             }
-            synchronized(WatchDir.keys) {
-            	it = ReadCustomizationFile.criticalDirectory.iterator();
-                while (it.hasNext()) {
-                	Object temp = it.next();
-                	if(!oldCriticalDirectory.contains(temp)) {
-                		Path dir =	Paths.get(it.next().toString());
-                    	if(Files.readAttributes(dir, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory())
-                    		WatchDir.registerAll(dir);
-                    	else 
-                    		WatchDir.register(dir);
-                	}
-                	
-                }
-                it = oldCriticalDirectory.iterator();
-                while (it.hasNext()) {
-                	Object temp = it.next();
-                	if(ReadCustomizationFile.notIndexDirectory.contains(temp)) {
-                		Files.walkFileTree(Paths.get(temp.toString()), new SimpleFileVisitor<Path>() {
-                            @Override
-                            public FileVisitResult preVisitDirectory(Path dir,BasicFileAttributes attrs) {
-                                try {
-                                	Collection<Path> values=WatchDir.keys.values();
-                                	Set<WatchKey> keys=WatchDir.keys.keySet();
-                                	Iterator<Path> it1=values.iterator();
-                                	Iterator<WatchKey> it2=keys.iterator();
-                                	while(it1.hasNext()){
-                                		WatchKey key=it2.next();
-                                		Path path=it1.next();
-                                		if(path.equals(dir)){
-                                			WatchDir.keys.remove(key);
-                                			break;
-                                		}
-                                	}
-                                } catch (Exception x) {}
-                                return FileVisitResult.CONTINUE;            
-                            }
-                        });
-                	}
-                	
+            synchronized(WatchDir.watcher) {
+            	synchronized(WatchDir.keys) {
+                	it = ReadCustomizationFile.criticalDirectory.iterator();
+                    while (it.hasNext()) {
+                    	String temp = it.next();
+                    	if(!oldCriticalDirectory.contains(temp)) {
+                    		Path dir =	Paths.get(temp);
+                        	if(Files.readAttributes(dir, BasicFileAttributes.class,NOFOLLOW_LINKS).isDirectory())
+                        		WatchDir.registerAll(dir);
+                        	else 
+                        		WatchDir.register(dir);
+                    	}
+                    	
+                    }
+                    it = oldCriticalDirectory.iterator();
+                    while (it.hasNext()) {
+                    	String temp = it.next();
+                    	if(!ReadCustomizationFile.criticalDirectory.contains(temp)) {
+                    		Files.walkFileTree(Paths.get(temp), new SimpleFileVisitor<Path>() {
+                                @Override
+                                public FileVisitResult preVisitDirectory(Path dir,BasicFileAttributes attrs) {
+                                    try {
+                                    	Set<WatchKey> keys=WatchDir.keys.keySet();
+                                    	Iterator<WatchKey> it1=keys.iterator();
+                                    	while(it1.hasNext()){
+                                    		WatchKey key = it1.next();
+                                    		Path path = WatchDir.keys.get(key);
+                                    		if(path.equals(dir)){
+                                    			key.cancel();
+                                    			WatchDir.keys.remove(key);
+                                    			break;
+                                    		}
+                                    	}
+                                    } catch (Exception x) {}
+                                    return FileVisitResult.CONTINUE;            
+                                }
+                            });
+                    	}
+                    	
+                    }
                 }
             }
+            
     	}
     	
     }
@@ -418,11 +422,12 @@ public class CustomizationUI extends javax.swing.JFrame {
     private JLabel jLabelCritical;
     private JLabel jLabelNotIndex;
     private JLabel jLabelInterval;
-    private JList jListCritical;
-    private JList jListNotIndex;
+    private JList<String> jListCritical;
+    private JList<String> jListNotIndex;
     private JScrollPane jScrollPane1;
     private JScrollPane jScrollPane2;
     private JButton jButtonCancel;
     private JButton jButtonSave;
     private JLabel jLabelInfo;
+    static final long serialVersionUID = 1;
 }
